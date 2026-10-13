@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Open Trip &amp; Private Trip Gunung | Karana Adventure</title>
+<meta id="m-desc" name="description" content="Open trip dan private trip pendakian gunung bersama Karana Adventure: camp, tektok, Raung, dan Rinjani. Lihat jadwal, harga per orang, dan cara daftar.">
+<meta name="robots" content="noindex,follow"><!-- TODO-LAUNCH: nilai robots diatur oleh SEO_LIVE di script. Sekarang noindex karena domain masih placeholder dan sebagian isi masih contoh. -->
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F6F6F3">
+<script>try{if(localStorage.getItem('karana_theme')!=='"dark"')document.documentElement.classList.add('light');}catch(e){document.documentElement.classList.add('light');}</script>
+<!-- TODO-DOMAIN: ganti https://karanaadventure.example dengan domain resmi (canonical, og:url, og:image, dan BASE di script). -->
+<script>
+/* Gambar contoh: dipakai onerror. Taruh foto asli di folder img/ dengan nama file yang sama, tanda "Foto contoh" hilang otomatis. */
+function sampleImg(img, fb) { img.onerror = null; img.src = fb; img.alt = "Foto contoh (ilustrasi)" + (img.dataset.alt ? ": " + img.dataset.alt : ""); var w = img.closest("[data-ph]"); if (w) { var t = w.querySelector(".sample-tag"); if (t) t.classList.remove("hidden"); } }
+function leaderFallback(img) { var b = document.createElement("span"); b.className = "bubble"; b.setAttribute("role", "img"); b.setAttribute("aria-label", "Foto leader belum tersedia"); b.innerHTML = '<i class="bx bx-user text-3xl" aria-hidden="true"></i>'; img.replaceWith(b); }
+</script>
+<link id="canon" rel="canonical" href="https://karanaadventure.example/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' fill='%230B0F0C'/%3E%3Cpath d='M3 19l6-11 4 6 2-3 6 8z' fill='%23FF6A1F'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:site_name" content="Karana Adventure">
+<meta id="og-title" property="og:title" content="Open Trip &amp; Private Trip Gunung | Karana Adventure">
+<meta id="og-desc" property="og:description" content="Jadwal open trip dan private trip gunung, harga per orang, dan cara daftar.">
+<!-- TODO-OG: ganti dengan foto dokumentasi asli Karana (1200x630). Gambar sekarang foto contoh Unsplash. -->
+<meta id="og-img" property="og:image" content="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:image:alt" content="Foto contoh: punggungan gunung berkabut saat fajar">
+<meta id="og-url" property="og:url" content="https://karanaadventure.example/">
+<meta name="twitter:card" content="summary_large_image">
+<meta id="tw-title" name="twitter:title" content="Open Trip &amp; Private Trip Gunung | Karana Adventure">
+<meta id="tw-desc" name="twitter:description" content="Jadwal open trip dan private trip gunung, harga per orang, dan cara daftar.">
+<meta id="tw-img" name="twitter:image" content="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80">
+<script type="application/ld+json" id="ld">{}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+window.tailwind = window.tailwind || {};
+tailwind.config = {
+  theme: { extend: {
+    colors: {
+      bg: 'rgb(var(--bg) / <alpha-value>)', surface: 'rgb(var(--surface) / <alpha-value>)', raise: 'rgb(var(--raise) / <alpha-value>)',
+      line: 'rgb(var(--line) / <alpha-value>)', fg: 'rgb(var(--fg) / <alpha-value>)', mute: 'rgb(var(--mute) / <alpha-value>)',
+      brand: 'rgb(var(--brand) / <alpha-value>)', ember: 'rgb(var(--ember) / <alpha-value>)'
+    },
+    fontFamily: { display: ['Plus Jakarta Sans', 'sans-serif'], body: ['Plus Jakarta Sans', 'sans-serif'] }
+  } }
+};
+</script>
+<style>
+  /* 3 palet: Ink/Bone (netral), Forest (brand), Ember (aksi) */
+  :root { --bg:22 27 25; --surface:31 37 34; --raise:41 48 44; --line:52 61 56; --fg:224 221 213; --mute:164 172 163; --brand:104 176 130; --ember:244 112 40; --on-ember:22 10 4; --r-sm:14px; --r-md:18px; --r-lg:26px; }
+  .light { --bg:246 246 243; --surface:255 255 255; --raise:236 237 232; --line:226 226 220; --fg:24 28 24; --mute:96 102 94; --brand:36 92 58; --ember:176 66 5; --on-ember:255 255 255; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Plus Jakarta Sans',system-ui,sans-serif; font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased; background:rgb(var(--bg)); color:rgb(var(--fg)); transition:background .25s,color .25s; -webkit-tap-highlight-color:transparent; }
+  .font-display { font-weight:700; line-height:1.15; }
+  .page { display:none; } .page.on { display:block; animation:rise .35s ease backwards; } /* backwards, bukan both: fill-mode forwards menahan transform aktif dan membuat elemen position:fixed di dalam halaman (bar harga) ikut menempel ke container halaman, bukan ke layar */
+  @keyframes rise { from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:none;} }
+  @keyframes inR { from{opacity:0; transform:translateX(36px);} to{opacity:1; transform:none;} }
+  @keyframes inL { from{opacity:0; transform:translateX(-36px);} to{opacity:1; transform:none;} }
+  .page.on.fwd { animation:inR .32s cubic-bezier(.2,.8,.2,1) backwards; } .page.on.bck { animation:inL .32s cubic-bezier(.2,.8,.2,1) backwards; }
+
+  /* ===== Versi kalem: tipe lebih kecil, sentence case, aksen lebih hemat ===== */
+  .font-display { text-transform:none !important; font-weight:600 !important; letter-spacing:-.01em !important; line-height:1.2 !important; }
+  h1.font-display { line-height:1.1 !important; }
+  .uppercase { text-transform:none !important; }
+  [class*="tracking-"]:not(.font-display) { letter-spacing:.01em !important; }
+  .btn { text-transform:none; letter-spacing:.01em; font-size:.95rem; font-weight:600; }
+  .label { text-transform:none; letter-spacing:.01em; font-size:.8rem; }
+  .text-\[\.68rem\],.text-\[\.65rem\],.text-\[\.7rem\],.text-\[\.72rem\] { font-size:.78rem !important; }
+  .font-display.text-2xl { font-size:1.2rem !important; }
+  .font-display.text-3xl { font-size:1.4rem !important; }
+  .font-display.text-4xl { font-size:1.65rem !important; }
+  .font-display.text-5xl { font-size:2rem !important; }
+  .font-display.text-6xl { font-size:2.4rem !important; }
+  .font-display.text-7xl { font-size:2.6rem !important; }
+  .font-display.text-8xl { font-size:3.2rem !important; }
+  .font-display.text-9xl { font-size:3.6rem !important; }
+  .font-display.text-\[2\.8rem\] { font-size:2.2rem !important; }
+  @media (min-width:640px){
+    .font-display.sm\:text-3xl { font-size:1.5rem !important; }
+    .font-display.sm\:text-4xl { font-size:1.8rem !important; }
+    .font-display.sm\:text-5xl { font-size:2.1rem !important; }
+    .font-display.sm\:text-6xl { font-size:2.6rem !important; }
+    .font-display.sm\:text-7xl { font-size:2.9rem !important; }
+    .font-display.sm\:text-8xl { font-size:3.6rem !important; }
+  }
+  @media (min-width:1024px){ .font-display.lg\:text-9xl { font-size:4.2rem !important; } }
+  .stp.fwd { animation:inR .28s cubic-bezier(.2,.8,.2,1) both; } .stp.bck { animation:inL .28s cubic-bezier(.2,.8,.2,1) both; }
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; min-height:46px; padding:.8rem 1.25rem; font-weight:600; font-size:.95rem; letter-spacing:.01em; text-transform:none; border-radius:2px; border:1px solid transparent; cursor:pointer; transition:transform .12s, filter .2s, border-color .2s; text-align:center; }
+  .btn:active { transform:scale(.97); }
+  .btn-ember { background:rgb(var(--ember)); color:rgb(var(--on-ember)); } .btn-ember:hover { filter:brightness(1.08); }
+  .btn-line { border-color:rgb(var(--line)); color:rgb(var(--fg)); background:transparent; } .btn-line:hover { border-color:rgb(var(--fg)); }
+  .btn:disabled { opacity:.55; cursor:not-allowed; }
+  .input { width:100%; min-height:48px; background:rgb(var(--surface)); border:1px solid rgb(var(--line)); border-radius:2px; padding:.75rem .9rem; color:rgb(var(--fg)); font-size:1rem; font-family:inherit; transition:border-color .15s; }
+  textarea.input { min-height:92px; resize:vertical; }
+  .input:focus { outline:none; border-color:rgb(var(--ember)); }
+  .label { display:block; margin-bottom:.4rem; font-size:.78rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:rgb(var(--mute)); }
+  .field .err { display:none; color:#F0605F; font-size:.78rem; margin-top:.35rem; } .field.bad .err { display:block; } .field.bad .input { border-color:#F0605F; }
+  .light .field .err { color:#C23B3A; }
+  :focus-visible { outline:2px solid rgb(var(--ember)); outline-offset:2px; }
+  .tile { border:1px solid rgb(var(--line)); background:rgb(var(--surface)); border-radius:2px; transition:border-color .15s, background .15s; cursor:pointer; text-align:left; }
+  .tile[aria-pressed="true"] { border-color:rgb(var(--ember)); background:rgb(var(--ember) / .08); }
+  .trip-row:hover .arrow { transform:translateX(4px); } .arrow { transition:transform .2s; }
+  .trip-row:hover h3 { color:rgb(var(--ember)); } .trip-row h3 { transition:color .2s; }
+  .rail::-webkit-scrollbar { display:none; } .rail { scrollbar-width:none; scroll-snap-type:x mandatory; }
+  .faq-a { display:grid; grid-template-rows:0fr; visibility:hidden; transition:grid-template-rows .3s ease, visibility .3s; } .faq.open .faq-a { visibility:visible; } .faq-a > div { overflow:hidden; } .faq.open .faq-a { grid-template-rows:1fr; } .faq.open .faq-ic { transform:rotate(45deg); color:rgb(var(--ember)); } .faq-ic { transition:transform .25s; }
+  .seg { height:4px; background:rgb(var(--line)); transition:background .3s; } .seg.on { background:rgb(var(--ember)); } .seg.done { background:rgb(var(--brand)); }
+  .sheet-bg { position:fixed; inset:0; background:rgb(0 0 0 / .6); z-index:80; display:none; align-items:flex-end; justify-content:center; } .sheet-bg.on { display:flex; animation:fade .2s; }
+  @keyframes fade { from{opacity:0;} to{opacity:1;} }
+  .sheet { width:100%; max-width:480px; max-height:92vh; overflow:auto; background:rgb(var(--bg)); border:1px solid rgb(var(--line)); padding:1.5rem; animation:up .28s ease; }
+  @keyframes up { from{transform:translateY(40px); opacity:0;} to{transform:none; opacity:1;} }
+  @media (min-width:640px){ .sheet-bg{ align-items:center; } }
+  .menu-panel { animation:slideIn .26s cubic-bezier(.2,.8,.2,1); } @keyframes slideIn { from{transform:translateX(100%);} to{transform:none;} }
+  html,body { overflow-x:clip; } .page { overflow-x:clip; } #detailBody .grid > * { min-width:0; } body.noscroll { overflow:hidden; }
+
+  /* ===== SKIN LEMBUT: sudut membulat, bayangan halus, tombol pill, aksen miring ===== */
+  body, .input, .btn { font-family:'Plus Jakarta Sans',system-ui,sans-serif; }
+  .font-display { font-family:'Plus Jakarta Sans',sans-serif !important; font-weight:700 !important; letter-spacing:-.02em !important; }
+  .acc { font-family:'Playfair Display',serif !important; font-style:italic; font-weight:500 !important; color:rgb(var(--ember)); letter-spacing:0 !important; }
+  .border { border-radius:var(--r-md); }
+  .btn { border-radius:999px; } .input { border-radius:var(--r-sm); } .tile { border-radius:var(--r-md); }
+  .h-10.w-10.border, .h-11.w-11.border, .wa { border-radius:999px; }
+  span.border, .rounded-chip { border-radius:999px; }
+  .sheet { border-radius:24px 24px 0 0; border:0; } @media (min-width:640px){ .sheet { border-radius:24px; } }
+  .menu-panel { border-radius:28px 0 0 28px; }
+  .seg { border-radius:999px; }
+  .soft { box-shadow:0 14px 34px -16px rgb(20 30 25 / .28); }
+  .light .soft { border-color:transparent; }
+  .trip-card { border-radius:var(--r-lg); box-shadow:0 14px 34px -16px rgb(20 30 25 / .30); border-color:transparent; }
+  .tile { box-shadow:0 6px 18px -12px rgb(20 30 25 / .25); }
+  .field .input { background:rgb(var(--surface)); }
+  header.sticky, header[class*="sticky"] { backdrop-filter:saturate(1.4) blur(14px); }
+  .bubble { width:56px; height:56px; border-radius:999px; display:grid; place-items:center; background:rgb(var(--ember) / .12); color:rgb(var(--ember)); }
+  .toast { position:fixed; left:50%; bottom:96px; transform:translate(-50%,20px); background:rgb(var(--fg)); color:rgb(var(--bg)); padding:.8rem 1.2rem; font-size:.85rem; font-weight:600; border-radius:999px; opacity:0; pointer-events:none; transition:.3s; z-index:120; max-width:90vw; text-align:center; }
+  .toast.on { opacity:1; transform:translate(-50%,0); }
+  .spin { width:16px; height:16px; border:2px solid currentColor; border-right-color:transparent; border-radius:50%; animation:sp .7s linear infinite; } @keyframes sp { to{transform:rotate(360deg);} }
+  .pulse-dot { animation:pd 1.8s ease-in-out infinite; } @keyframes pd { 0%,100%{opacity:1;} 50%{opacity:.35;} }
+  .wa { position:fixed; right:14px; bottom:18px; z-index:45; width:52px; height:52px; display:grid; place-items:center; background:rgb(var(--brand)); color:rgb(var(--bg)); border-radius:999px; box-shadow:0 4px 14px rgb(0 0 0 / .22); transition:transform .15s, bottom .2s, opacity .2s; opacity:0; pointer-events:none; transform:translateY(10px); }
+  .wa.show { opacity:1; pointer-events:auto; transform:none; } body.noscroll .wa { opacity:0; pointer-events:none; }
+  .wa.hide-m { display:none; } @media (min-width:1024px){ .wa.hide-m { display:grid; } }
+  .tile { position:relative; } .tile[aria-pressed="true"] { border-color:rgb(var(--ember)); background:rgb(var(--ember) / .13); box-shadow:inset 0 0 0 1px rgb(var(--ember)); }
+  .tile[aria-pressed="true"]::after { content:'✓'; position:absolute; top:6px; right:6px; width:18px; height:18px; border-radius:999px; background:rgb(var(--ember)); color:rgb(var(--on-ember)); font-size:11px; font-weight:800; line-height:18px; text-align:center; }
+  .dchip[aria-pressed="true"]::after { display:none; } .dchip[aria-pressed="true"] { background:rgb(var(--ember)); border-color:rgb(var(--ember)); color:rgb(var(--on-ember)); box-shadow:none; } .dchip[aria-pressed="true"] span { color:inherit; }
+  .mbar-cta .btn { white-space:nowrap; padding-inline:1.1rem; }
+  .wa.show:hover { transform:translateY(-2px); } .wa.up { bottom:92px; } @media (min-width:1024px){ .wa.up { bottom:20px; } }
+  .chk { accent-color:rgb(var(--ember)); width:20px; height:20px; flex-shrink:0; margin-top:2px; }
+  .skip { position:absolute; left:-999px; top:8px; z-index:200; background:rgb(var(--ember)); color:rgb(var(--on-ember)); padding:.6rem 1rem; font-weight:600; } .skip:focus { left:8px; }
+  /* ===== Polesan premium: aksen ember hemat, hover halus, fokus jelas ===== */
+  .btn-ember { box-shadow:0 10px 22px -12px rgb(var(--ember) / .75); }
+  .trip-card { transition:transform .25s, box-shadow .25s; } .trip-card:hover { transform:translateY(-4px); }
+  @media (hover:none) { .trip-card:hover { transform:none; } }
+  .input:focus { box-shadow:0 0 0 4px rgb(var(--ember) / .16); }
+  .tile:hover { border-color:rgb(var(--mute)); } .tile[aria-pressed="true"]:hover { border-color:rgb(var(--ember)); }
+  .soon-badge{background:#FFE14D;color:#1a1a1a;font-weight:700}
+.soon-box{border:1px dashed rgb(var(--ember));background:rgb(var(--ember) / .08);padding:1.25rem}
+.kat-pill{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.15rem .5rem;border:1px solid currentColor}
+details.dt>summary{display:flex;align-items:center;justify-content:space-between;min-height:44px;cursor:pointer;list-style:none;font-weight:600}
+details.dt>summary::-webkit-details-marker{display:none}
+details.dt[open]>summary .dt-ic{transform:rotate(45deg)}
+.dt-ic{transition:transform .2s}
+@media (prefers-reduced-motion:reduce){ *,*::before,*::after{ animation-duration:.001ms!important; transition-duration:.001ms!important; } html{scroll-behavior:auto;} }
+
+  /* ===== v5: hero, penanda contoh, badge ===== */
+  .hero-h{font-size:clamp(1.5rem,7.8vw,4.6rem);line-height:1.08 !important;text-wrap:balance}
+  .hero-h .hl{display:block}
+  .hero-h .acc{color:#FF9A5E !important}
+  .soon-badge{display:inline-block;padding:.1rem .6rem;border-radius:999px;font-size:.78rem}
+  .sample-tag{position:absolute;right:.6rem;bottom:.6rem;background:rgb(0 0 0 / .62);color:#fff;font-size:.75rem;font-weight:600;line-height:1.3;padding:.15rem .55rem;border-radius:999px;z-index:2;pointer-events:none}
+  .pend{display:inline-block;margin-left:.4rem;font-size:.78rem;font-weight:700;line-height:1.35;padding:.1rem .55rem;border-radius:999px;background:#FFE14D;color:#1a1a1a;vertical-align:middle;letter-spacing:0}
+  .prose-s{max-width:68ch}
+
+  /* ===== v6 ===== */
+  @media (max-height:700px){ .hero-eyebrow{display:none} }
+  .input[aria-invalid="true"]{border-color:#F0605F}
+  .light .input[aria-invalid="true"]{border-color:#C23B3A}
+  .field .err{font-size:.82rem}
+</style>
+</head>
+<body class="font-body antialiased">
+<button class="skip" onclick="skipToMain()">Lewati ke konten</button>
+<div class="border-b border-line bg-ember/10 px-4 py-1.5 text-center text-[.75rem] font-medium leading-snug" role="note">Mode pratinjau: foto, data, dan rekening masih contoh.<span class="hidden sm:inline"> Formulir belum terhubung ke server.</span></div>
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-50 border-b border-line bg-bg/85 backdrop-blur">
+  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
+    <div class="flex min-w-0 items-center gap-2">
+      <button id="backBtn" onclick="goBack()" class="hidden h-11 w-11 shrink-0 place-items-center border border-line" aria-label="Kembali"><i class="bx bx-arrow-back text-xl" aria-hidden="true"></i></button>
+      <a href="#/" class="flex min-h-[44px] min-w-0 items-center gap-2" aria-label="Karana Adventure, ke beranda">
+        <i class="bx bxs-landscape text-2xl text-ember" aria-hidden="true"></i>
+        <span class="truncate font-display text-xl leading-none">Karana <span class="align-middle text-sm font-medium text-mute">Adventure</span></span>
+      </a>
+    </div>
+    <nav class="flex shrink-0 items-center gap-1 sm:gap-2" aria-label="Navigasi utama">
+      <button onclick="jump('jadwal')" class="hidden px-3 text-sm font-medium text-mute hover:text-fg md:block">Jadwal</button>
+      <button onclick="openTab('private'); jump('jadwal')" class="hidden px-3 text-sm font-medium text-mute hover:text-fg md:block">Private trip</button>
+      <button onclick="jump('faq')" class="hidden px-3 text-sm font-medium text-mute hover:text-fg md:block">FAQ</button>
+      <a href="#/status" class="hidden px-3 text-sm font-medium text-mute hover:text-fg md:block">Cek status booking</a>
+      <button onclick="toggleTheme()" class="grid h-11 w-11 place-items-center border border-line" aria-label="Ganti mode terang atau gelap"><i id="themeIc" class="bx bx-sun text-xl" aria-hidden="true"></i></button>
+      <button onclick="openMenu()" class="grid h-11 w-11 place-items-center border border-line" aria-label="Buka menu" aria-haspopup="dialog"><i class="bx bx-menu text-xl" aria-hidden="true"></i></button>
+    </nav>
+  </div>
+</header>
+
+<noscript><div style="padding:24px;max-width:720px;margin:auto"><h1>Karana Adventure — Open Trip Gunung</h1><p>Aktifkan JavaScript untuk melihat jadwal dan mendaftar. Atau hubungi kami di WhatsApp: +62 851-8843-1329.</p><ul><li>Camp: Gede, Merbabu, Sindoro, Sumbing, Slamet, Prau, Lawu, Ciremai</li><li>Tektok: Gede, Kawah Ratu, Papandayan, Ciremai, Sunan Ibu + Citambur</li><li>Raung via Kalibaru</li><li>Overland: Rinjani, Kerinci, Banyuwangi</li><li>Private trip: Economy, Executive, VIP, Luxury</li></ul></div></noscript>
+
+<div id="main" tabindex="-1">
+<!-- ============ HOME ============ -->
+<main id="p-home" class="page on">
+  <section data-ph class="relative isolate flex min-h-[calc(100vh-100px)] min-h-[calc(100svh-100px)] items-end overflow-hidden bg-[#1b221e] text-white">
+    <img src="img/hero.jpg" onerror="sampleImg(this,'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80')" data-alt="punggungan gunung berkabut saat fajar" width="1600" height="1067" fetchpriority="high" alt="Punggungan gunung berkabut saat fajar" class="absolute inset-0 -z-10 h-full w-full object-cover">
+    <span class="sample-tag hidden !bottom-auto !top-3">Foto contoh</span>
+    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-black/85 via-black/40 to-black/20"></div>
+    <div class="mx-auto w-full max-w-6xl px-5 pb-5 pt-8 sm:pb-8 sm:pt-32">
+      <p class="hero-eyebrow mb-3 flex items-center gap-2 text-sm font-semibold text-white/90"><span class="h-0.5 w-6 shrink-0 rounded-full bg-[#FF8A4C] sm:w-8"></span>Open trip · Private trip<span class="hidden sm:inline"> · Harga per orang tertera</span></p>
+      <h1 class="font-display hero-h"><span class="hl">Puncak Adalah Tujuan,</span><span class="hl">Perjalanan Adalah <span class="acc">Cerita.</span></span></h1>
+      <p class="mt-2 text-base font-semibold text-white/90 sm:text-lg">Bukan Sekadar Sampai Puncak.</p>
+      <p class="mt-2 max-w-xl text-base text-white/85 sm:mt-3 sm:text-lg">Temukan perjalanan pendakian yang sesuai denganmu, pilih jadwal trip, dan mulai petualangan baru bersama Karana Adventure.</p>
+      <div class="mt-4 flex gap-3 sm:mt-8">
+        <button onclick="jump('jadwal')" class="btn btn-ember flex-[1.3] whitespace-nowrap !px-3 sm:flex-none sm:!px-5">Lihat Jadwal Trip <i class="bx bx-down-arrow-alt hidden text-lg sm:inline" aria-hidden="true"></i></button>
+        <button onclick="openTab('private'); jump('jadwal')" class="btn flex-1 whitespace-nowrap border-white/60 bg-white/10 !px-3 text-white backdrop-blur hover:border-white sm:flex-none sm:!px-5"><span class="sm:hidden">Private trip</span><span class="hidden sm:inline">Konsultasi Private Trip</span></button>
+      </div>
+      <form onsubmit="heroSearch(event)" class="mt-5 flex items-center gap-2 rounded-full bg-white p-2 pl-5 text-neutral-900 shadow-2xl sm:mt-8" aria-label="Cari trip berdasarkan gunung">
+        <i class="bx bx-map-pin text-xl text-neutral-500" aria-hidden="true"></i>
+        <button type="button" id="hsBtn" onclick="openPick()" aria-haspopup="dialog" class="flex min-h-[48px] min-w-0 flex-1 items-center justify-between gap-2 text-left"><span class="min-w-0"><span class="block text-[.75rem] font-semibold leading-none text-neutral-600">Mau ke mana?</span><span id="hsLabel" class="mt-1 block truncate text-sm font-semibold">Semua gunung</span></span><i class="bx bx-chevron-down shrink-0 text-lg text-neutral-500" aria-hidden="true"></i></button>
+        <button class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#C44E08] text-white" aria-label="Lihat trip pilihan"><i class="bx bx-search text-xl" aria-hidden="true"></i></button>
+      </form>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 pb-2 pt-8 sm:pb-4 sm:pt-12" aria-labelledby="h-usp"><h2 id="h-usp" class="sr-only">Yang perlu kamu tahu tentang Karana Adventure</h2>
+    <ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <li class="flex items-start gap-3"><span class="bubble !h-12 !w-12 shrink-0"><i class="bx bx-shield-quarter text-2xl" aria-hidden="true"></i></span><div><h3 class="font-display text-base">Dipandu trip leader</h3><p class="mt-1 text-sm text-mute">Profil trip leader ditampilkan di halaman detail trip.</p></div></li>
+      <li class="flex items-start gap-3"><span class="bubble !h-12 !w-12 shrink-0"><i class="bx bx-receipt text-2xl" aria-hidden="true"></i></span><div><h3 class="font-display text-base">Harga per orang jelas</h3><p class="mt-1 text-sm text-mute">Harga tertera per orang. Rincian termasuk dan tidak termasuk dilengkapi di halaman tiap trip.</p></div></li>
+      <li class="flex items-start gap-3"><span class="bubble !h-12 !w-12 shrink-0"><i class="bx bx-group text-2xl" aria-hidden="true"></i></span><div><h3 class="font-display text-base">Open trip atau private trip</h3><p class="mt-1 text-sm text-mute">Gabung jadwal yang sudah dibuka, atau susun trip sendiri bersama rombonganmu.</p></div></li>
+      <li class="flex items-start gap-3"><span class="bubble !h-12 !w-12 shrink-0"><i class="bx bx-wallet text-2xl" aria-hidden="true"></i></span><div><h3 class="font-display text-base">DP 50%, lunas di basecamp</h3><p class="mt-1 text-sm text-mute">Alur pendaftaran memakai DP 50%. Ketentuan lengkap ada di Syarat &amp; Ketentuan.</p></div></li>
+    </ul>
+  </section>
+
+  <section id="jadwal" class="mx-auto max-w-6xl scroll-mt-16 px-5 py-12" aria-labelledby="h-jadwal">
+    <div class="mb-8 flex flex-wrap items-end justify-between gap-5">
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-[.25em] text-ember">Keberangkatan</p>
+        <h2 id="h-jadwal" class="font-display text-4xl sm:text-6xl">Pilih <span class="acc">trip pendakianmu</span></h2>
+        <p class="mt-3 max-w-xl text-mute">Bandingkan keberangkatan terdekat, durasi, dan harga per orang. Buka detail trip untuk melihat tanggal lain, paket, dan fasilitas.</p>
+      </div>
+      <div class="grid grid-cols-2 rounded-full bg-raise p-1" role="tablist" aria-label="Tipe trip">
+        <button id="tab-open" role="tab" aria-controls="panel-open" onclick="openTab('open')" class="rounded-full px-5 py-2.5 text-sm font-semibold">Open trip</button>
+        <button id="tab-private" role="tab" aria-controls="panel-private" onclick="openTab('private')" class="rounded-full px-5 py-2.5 text-sm font-semibold">Private trip</button>
+      </div>
+    </div>
+
+    <div id="panel-open" role="tabpanel" aria-labelledby="tab-open">
+      <div id="chips" class="rail mb-2 flex gap-2 overflow-x-auto pb-3" role="group" aria-label="Filter kategori trip"></div>
+      <div id="tripList" class="rail -mx-5 flex gap-4 overflow-x-auto px-5 pb-3 md:mx-0 md:grid md:grid-cols-2 md:gap-5 md:overflow-visible md:px-0 lg:grid-cols-3"></div>
+      <div id="moreWrap" class="mt-4"></div>
+      <p class="mt-4 pr-16 text-sm text-mute"><i class="bx bx-info-circle align-middle" aria-hidden="true"></i> Belum ada jadwal yang cocok? Tekan <b class="text-fg">Kabari saya</b> di kartu trip, atau <a class="js-wa font-semibold text-ember underline" href="#" target="_blank" rel="noopener">tanya admin via WhatsApp</a>.</p>
+      <p class="mt-2 pr-16 text-xs text-mute">Jadwal, harga per orang, dan paket bersumber dari poster Karana. Kuota asli belum tersambung, jadi sisa slot tidak ditampilkan.</p>
+    </div>
+
+    <div id="panel-private" class="hidden" role="tabpanel" aria-labelledby="tab-private">
+      <div class="grid gap-10 lg:grid-cols-2">
+        <div>
+          <h3 class="font-display text-4xl font-bold leading-none sm:text-5xl">Berangkat sama rombonganmu sendiri</h3>
+          <p class="mt-4 max-w-md text-mute">Tersedia untuk gunung-gunung Jawa Barat dan Jawa Tengah. Gunung, transport, menu, tanggal, dan meeting point bisa kamu request. Pilih paket dan jumlah peserta untuk melihat estimasi harga.</p>
+          <p class="label mt-6" id="lPaket">Pilih paket</p>
+          <div id="pvPaket" class="grid grid-cols-2 gap-2" role="group" aria-labelledby="lPaket"></div>
+          <p id="pvDiff" class="mt-3 text-sm text-mute"></p>
+          <span class="label mt-5" id="lPax">Jumlah peserta</span>
+          <div class="inline-flex items-center border border-line" role="group" aria-labelledby="lPax">
+            <button type="button" onclick="pvStep(-1)" class="grid h-12 w-12 place-items-center text-xl hover:bg-raise" aria-label="Kurangi peserta"><i class="bx bx-minus" aria-hidden="true"></i></button>
+            <span id="pvQty" class="grid h-12 w-14 place-items-center border-x border-line font-display text-2xl font-bold" aria-live="polite">5</span>
+            <button type="button" onclick="pvStep(1)" class="grid h-12 w-12 place-items-center text-xl hover:bg-raise" aria-label="Tambah peserta"><i class="bx bx-plus" aria-hidden="true"></i></button>
+          </div>
+          <div class="mt-5 border border-line bg-surface p-5" aria-live="polite">
+            <p class="text-[.68rem] font-semibold uppercase tracking-widest text-mute">Harga per orang</p>
+            <p id="pvPer" class="font-display text-5xl font-extrabold leading-none text-ember"></p>
+            <dl class="mt-4 grid grid-cols-2 gap-3 text-sm"><div><dt class="text-mute">Total</dt><dd id="pvTotal" class="font-semibold"></dd></div><div><dt class="text-mute">DP 50%</dt><dd id="pvDp" class="font-semibold"></dd></div></dl>
+            <p class="mt-3 text-xs text-mute">Ini estimasi dari tarif paket. Harga final dikonfirmasi admin setelah konsultasi. Belum termasuk transportasi dari meeting point ke basecamp dan tiket WNA.</p>
+          </div>
+          <details class="dt mt-4 border-t border-line"><summary><span id="pvFasTitle">Fasilitas paket</span><i class="bx bx-plus dt-ic text-2xl" aria-hidden="true"></i></summary><ul id="pvFas" class="grid gap-x-6 sm:grid-cols-2"></ul><div class="pb-3 pt-2"><p class="label !mb-1 !text-ember">Belum termasuk</p><ul class="text-sm text-mute"><li class="flex gap-2 border-t border-line py-2"><i class="bx bx-x text-xl text-ember" aria-hidden="true"></i>Transportasi dari meeting point ke basecamp</li><li class="flex gap-2 border-t border-line py-2"><i class="bx bx-x text-xl text-ember" aria-hidden="true"></i>Tiket WNA</li></ul></div></details>
+          <details class="dt border-t border-line"><summary>Tarif semua paket<i class="bx bx-plus dt-ic text-2xl" aria-hidden="true"></i></summary><div id="pvTable" class="overflow-x-auto pb-3"></div></details>
+          <details class="dt border-y border-line"><summary>Menu by request<i class="bx bx-plus dt-ic text-2xl" aria-hidden="true"></i></summary><div class="pb-3"><div id="pvMenu" class="grid gap-4 sm:grid-cols-2"></div><p class="mt-3 text-xs text-mute">Economy dan Executive: pilih 2 menu makan berat dan 1 breakfast untuk 1 kelompok. VIP dan Luxury: pilih 2 menu makan berat dan 3 breakfast.</p></div></details>
+        </div>
+        <form id="privForm" class="space-y-4 self-start border border-line bg-surface p-5 sm:p-7" novalidate>
+          <p class="font-display text-2xl font-bold">Konsultasi rencana trip</p>
+          <div class="field"><label class="label" for="pNama">Nama</label><input id="pNama" class="input" autocomplete="name" placeholder="Nama kamu"><p class="err">Nama wajib diisi.</p></div>
+          <div class="field"><label class="label" for="pWa">WhatsApp</label><input id="pWa" class="input" inputmode="tel" autocomplete="tel" placeholder="0812xxxxxxxx"><p class="err">Nomor belum valid. Contoh: 0812xxxxxxxx atau +62812xxxxxxxx.</p></div>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="field"><label class="label" for="pGunung">Gunung tujuan</label><select id="pGunung" class="input"></select></div>
+            <div class="field"><label class="label" for="pPaket">Paket</label><select id="pPaket" class="input"></select></div>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="field"><label class="label" for="pJumlah">Jumlah orang</label><input id="pJumlah" type="number" min="1" max="20" value="5" class="input"><p class="err">Isi 1–20 orang. Lebih dari 20? Hubungi admin lewat WhatsApp.</p></div>
+            <div class="field"><label class="label" for="pTgl">Rencana tanggal (opsional)</label><input id="pTgl" type="date" class="input"><p class="err">Pilih tanggal hari ini atau sesudahnya.</p></div>
+          </div>
+          <div class="field"><label class="label" for="pMeet">Meeting point (opsional)</label><input id="pMeet" class="input" placeholder="Kota atau lokasi penjemputan"></div>
+          <div class="field"><label class="label" for="pCatatan">Request transport dan menu (opsional)</label><textarea id="pCatatan" class="input" placeholder="Contoh: mobil 7 seater, menu nasi liwet dan soto"></textarea></div>
+          <button class="btn btn-ember w-full" type="submit">Konsultasi Private Trip</button>
+          <p class="text-xs text-mute">Rencana belum dikirim ke server. Setelah menekan tombol, kamu bisa mengirimnya ke admin lewat WhatsApp.</p>
+        </form>
+      </div>
+      <div id="privDone" class="mt-8 hidden border border-brand/50 bg-brand/10 p-6" role="status">
+        <p class="font-display text-3xl font-bold">Rencana siap dikirim</p>
+        <p class="mt-2 text-mute">Rencana ini belum terkirim ke tim Karana. Tekan tombol di bawah untuk mengirimnya lewat WhatsApp, lalu admin bisa menyusun penawaran bersamamu.</p>
+        <p class="mt-3 text-xs text-mute">Mode demo: isian hanya tersimpan di perangkat ini dan belum dikirim ke server.</p>
+        <a id="privWa" target="_blank" rel="noopener" class="btn btn-ember mt-4"><i class="bx bxl-whatsapp text-lg" aria-hidden="true"></i> Kirim rencana via WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cara daftar -->
+  <section id="cara" class="scroll-mt-16 border-y border-line bg-surface" aria-labelledby="h-cara">
+    <div class="mx-auto max-w-6xl px-5 py-10 sm:py-14">
+      <h2 id="h-cara" class="mb-6 sm:mb-8 font-display text-3xl sm:text-5xl">Daftar dalam <span class="acc">3 langkah</span></h2>
+      <ol class="grid gap-5 md:grid-cols-3 md:gap-8">
+        <li class="flex gap-4 md:block"><p class="font-display text-3xl leading-none text-ember/80 md:text-5xl" aria-hidden="true">01</p><div><h3 class="mt-1 font-display text-xl font-bold md:text-2xl">Pilih jadwal</h3><p class="mt-1 text-mute">Bandingkan tanggal dan harga per orang. Rincian termasuk dan tidak termasuk ada di halaman detail, dan untuk beberapa trip masih dilengkapi.</p></div></li>
+        <li class="flex gap-4 md:block"><p class="font-display text-3xl leading-none text-ember/80 md:text-5xl" aria-hidden="true">02</p><div><h3 class="mt-1 font-display text-xl font-bold md:text-2xl">Isi data, bayar DP 50%</h3><p class="mt-1 text-mute">Isi data peserta, transfer DP, lalu unggah bukti transfer. Ketentuan DP masih menunggu konfirmasi final Karana.</p></div></li>
+        <li class="flex gap-4 md:block"><p class="font-display text-3xl leading-none text-ember/80 md:text-5xl" aria-hidden="true">03</p><div><h3 class="mt-1 font-display text-xl font-bold md:text-2xl">Tunggu verifikasi</h3><p class="mt-1 text-mute">Setelah pembayaran diverifikasi tim Karana, peserta dimasukkan ke grup WhatsApp keberangkatan. Sisa pembayaran dilunasi di basecamp.</p></div></li>
+      </ol>
+      <p class="mt-6 text-sm text-mute">Versi demo: langkah 2 dan 3 hanya simulasi di perangkatmu. Belum ada verifikasi pembayaran atau grup WhatsApp sungguhan.</p>
+    </div>
+  </section>
+
+
+
+  <section id="tentang" class="scroll-mt-16 border-y border-line bg-surface" aria-labelledby="h-tentang">
+    <div class="mx-auto grid max-w-6xl gap-8 px-5 py-12 sm:py-16 md:grid-cols-2 md:items-start">
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-[.25em] text-ember">Tentang Karana</p>
+        <h2 id="h-tentang" class="font-display text-3xl sm:text-5xl">Kenali <span class="acc">Karana Adventure</span></h2>
+        <p class="prose-s mt-4 text-mute">Karana Adventure berdiri sejak <b class="text-fg">29 September 2024</b>. Kami menyelenggarakan open trip, private trip, dan family gathering ke gunung-gunung Indonesia, dari tektok sehari sampai pendakian multi-hari seperti Raung dan Rinjani.</p>
+        <p class="prose-s mt-3 text-mute">Jadwal, harga per orang, dan ketentuan ditulis di situs ini supaya bisa kamu baca sebelum mendaftar. Pertanyaan bisa dikirim lewat WhatsApp.</p>
+        <dl class="mt-6 grid grid-cols-3 gap-3 text-center">
+          <div class="border border-line p-3"><dt class="text-[.7rem] uppercase tracking-widest text-mute">Sejak</dt><dd class="font-display text-2xl font-bold">2024</dd></div>
+          <div class="border border-line p-3"><dt class="text-[.7rem] uppercase tracking-widest text-mute">Pilihan trip</dt><dd id="tentangN" class="font-display text-2xl font-bold">19</dd></div>
+          <div class="border border-line p-3"><dt class="text-[.7rem] uppercase tracking-widest text-mute">Kategori</dt><dd id="tentangK" class="font-display text-2xl font-bold">4</dd></div>
+        </dl>
+      </div>
+      <div class="soon-box">
+        <span class="soon-badge">Contoh, menunggu persetujuan founder</span>
+        <h3 class="mt-3 font-display text-2xl font-bold">Dari pendiri</h3>
+        <div class="mt-4 flex items-center gap-3"><span class="bubble !h-12 !w-12 shrink-0" role="img" aria-label="Foto founder belum tersedia"><i class="bx bx-user text-2xl" aria-hidden="true"></i></span><div><p class="font-semibold">Nama founder</p><p class="text-sm text-mute">Founder Karana Adventure</p></div></div>
+        <blockquote class="mt-4 border-l-2 border-ember pl-4 font-display text-lg leading-snug">“Bagi kami, perjalanan yang baik bukan hanya tentang mencapai puncak, tetapi juga tentang bagaimana setiap langkah dijalani dan setiap orang saling menjaga.”</blockquote>
+        <p class="mt-3 text-xs text-mute">Draf kutipan: belum disetujui founder. Nama, foto, dan kutipan masih contoh (dummy) dan akan diganti sebelum launching.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeri" class="scroll-mt-16 mx-auto max-w-6xl px-5 py-12 sm:py-16" aria-labelledby="h-galeri">
+    <p class="text-xs font-semibold uppercase tracking-[.25em] text-ember">Dokumentasi</p>
+    <h2 id="h-galeri" class="font-display text-3xl sm:text-5xl">Dokumentasi <span class="acc">trip Karana</span></h2>
+    <p class="mt-3 max-w-xl text-mute">Dokumentasi trip Karana ada di Instagram. Foto di bawah masih contoh; ketuk salah satunya untuk membuka Instagram Karana.</p>
+    <div id="dokGrid" class="mt-6 grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-4"></div>
+    <p class="mt-3 text-xs text-mute">Foto bertanda “Foto contoh” adalah gambar ilustrasi, bukan dokumentasi asli Karana.</p>
+    <div class="js-social mt-5 flex flex-wrap gap-3"></div>
+  </section>
+
+  <section id="testi" class="scroll-mt-16 border-y border-line bg-surface" aria-labelledby="h-testi">
+    <div class="mx-auto max-w-6xl px-5 py-10 sm:py-14">
+      <h2 id="h-testi" class="mb-5 font-display text-3xl sm:mb-7 sm:text-5xl">Testimoni <span class="acc">peserta</span></h2>
+      <div id="testiWrap" role="region" aria-roledescription="carousel" aria-label="Testimoni peserta">
+        <div id="testiTrack" class="rail -mx-5 flex snap-x gap-3 overflow-x-auto px-5 pb-1 lg:mx-0 lg:grid lg:grid-cols-3 lg:overflow-visible lg:px-0" aria-live="off"></div>
+        <div id="testiDots" class="mt-3 flex items-center justify-center gap-1 lg:hidden" role="group" aria-label="Pilih testimoni"></div>
+      </div>
+      <p class="mt-3 text-xs text-mute">Semua testimoni, nama, dan foto di atas contoh (dummy) untuk menilai tampilan, bukan ulasan peserta asli. Akan diganti sebelum launching.</p>
+    </div>
+  </section>
+
+  <section id="faq" class="mx-auto max-w-3xl scroll-mt-16 px-5 py-16" aria-labelledby="h-faq">
+    <p class="text-xs font-semibold uppercase tracking-[.25em] text-ember">FAQ</p>
+    <h2 id="h-faq" class="mb-3 font-display text-4xl sm:text-6xl">Sering <span class="acc">ditanyakan</span></h2>
+    <p class="mb-6 text-mute">Jawaban singkat untuk pertanyaan yang paling sering muncul. Ketentuan lengkap ada di <a href="#/syarat" class="font-semibold text-ember underline">Syarat &amp; Ketentuan</a>.</p>
+    <div id="faqList" class="border-b border-line"></div>
+  </section>
+</main>
+
+<!-- ============ DETAIL ============ -->
+<main id="p-detail" class="page"><div id="detailBody"></div></main>
+
+<!-- ============ BOOKING ============ -->
+<main id="p-booking" class="page">
+  <div class="mx-auto max-w-6xl px-5 py-8 pb-28 lg:pb-16">
+    <p class="text-xs font-semibold uppercase tracking-[.25em] text-ember">Pendaftaran</p>
+    <h1 class="mb-1 font-display text-4xl sm:text-6xl">Daftar trip ini</h1>
+    <p id="bSub" class="mb-4 text-lg font-semibold"></p>
+    <div class="mb-6 border border-ember/60 bg-ember/10 p-3 text-sm" role="note"><b>Mode demo.</b> Formulir ini belum terhubung ke server. Data hanya tersimpan di perangkat ini, bukti transfer tidak benar-benar diunggah, dan penahanan slot hanya simulasi di halaman ini. Rekening di langkah pembayaran adalah contoh, jangan transfer.</div>
+
+    <div class="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,1fr)_380px]">
+      <div>
+        <div class="mb-2 grid grid-cols-3 gap-2" aria-hidden="true"><div id="seg1" class="seg on"></div><div id="seg2" class="seg"></div><div id="seg3" class="seg"></div></div>
+        <div class="mb-6 grid grid-cols-3 gap-2 text-[.7rem] font-semibold uppercase tracking-widest"><span id="sl1">01 Data diri</span><span id="sl2">02 Pembayaran</span><span id="sl3">03 Selesai</span></div>
+
+        <div id="holdBar" class="mb-6 hidden items-center justify-between gap-3 border border-ember/60 bg-ember/10 px-4 py-3 text-sm" role="timer" aria-live="off">
+          <span class="flex items-center gap-2"><i class="bx bx-time-five text-xl text-ember" aria-hidden="true"></i>Simulasi tahan slot, sisa waktu</span>
+          <span id="holdTime" class="font-display text-2xl font-extrabold tabular-nums text-ember">02:00:00</span>
+        </div>
+
+        <!-- Step 1 -->
+        <section id="s1" class="stp" aria-labelledby="h-s1">
+          <h2 id="h-s1" class="mb-2 font-display text-3xl font-bold">Data peserta</h2>
+          <p class="mb-5 text-mute">Isi data pendaftar dan semua peserta sesuai KTP. Langkah berikutnya: pembayaran.</p>
+          <div id="bNotes" class="mb-5 hidden border border-line bg-surface p-4 text-sm" role="note"></div>
+          <div class="space-y-4">
+            <div class="field"><label class="label" for="bNama">Nama lengkap (pendaftar)</label><input id="bNama" class="input" autocomplete="name" placeholder="Sesuai KTP"><p class="err">Nama wajib diisi.</p></div>
+            <div class="field"><label class="label" for="bWa">WhatsApp aktif</label><input id="bWa" class="input" inputmode="tel" autocomplete="tel" placeholder="0812xxxxxxxx"><p class="err">Nomor belum valid. Contoh: 0812xxxxxxxx atau +62812xxxxxxxx.</p></div>
+            <div>
+              <span class="label" id="lQty">Jumlah peserta</span>
+              <div class="inline-flex items-center border border-line" role="group" aria-labelledby="lQty">
+                <button type="button" onclick="setQty(-1)" class="grid h-12 w-12 place-items-center text-xl hover:bg-raise" aria-label="Kurangi peserta"><i class="bx bx-minus" aria-hidden="true"></i></button>
+                <span id="bQty" class="grid h-12 w-14 place-items-center border-x border-line font-display text-2xl font-bold" aria-live="polite">1</span>
+                <button type="button" onclick="setQty(1)" class="grid h-12 w-12 place-items-center text-xl hover:bg-raise" aria-label="Tambah peserta"><i class="bx bx-plus" aria-hidden="true"></i></button>
+              </div>
+              <p id="qtyNote" class="mt-2 text-xs text-mute"></p>
+            </div>
+            <div id="bExtra" class="space-y-4"></div>
+            <div><span class="label" id="lTitik">Pilih paket</span><div id="bTitik" class="grid gap-2 sm:grid-cols-2" role="group" aria-labelledby="lTitik"></div></div>
+            <div class="field"><label class="label" for="bDate">Tanggal keberangkatan</label><select id="bDate" class="input" onchange="S.dep=+this.value; setQty(0)"></select></div>
+            <div class="field"><label class="label" for="bMeet">Meeting point</label><select id="bMeet" class="input"></select></div>
+            <fieldset class="space-y-4 border border-line p-4">
+              <legend class="px-2 text-[.7rem] font-semibold uppercase tracking-[.14em] text-mute">Kontak darurat</legend>
+              <p class="text-sm text-mute">Orang yang dihubungi jika terjadi keadaan darurat selama trip.</p>
+              <div class="field"><label class="label" for="bDarNama">Nama (keluarga/kerabat)</label><input id="bDarNama" class="input" placeholder="Nama kontak darurat"><p class="err">Nama kontak darurat wajib diisi.</p></div>
+              <div class="field"><label class="label" for="bDarWa">WhatsApp kontak darurat</label><input id="bDarWa" class="input" inputmode="tel" placeholder="0812xxxxxxxx"><p class="err">Nomor belum valid. Contoh: 0812xxxxxxxx atau +62812xxxxxxxx.</p></div>
+              <div class="field"><label class="label" for="bSehat">Catatan kesehatan (opsional)</label><textarea id="bSehat" class="input" placeholder="Contoh: asma, alergi, obat rutin. Isi hanya jika relevan untuk keselamatan trip."></textarea></div>
+            </fieldset>
+          </div>
+          <p class="mt-4 text-xs text-mute">Formulir ini meminta data untuk mendaftarkan peserta dan menghubungi kontak darurat. Kebijakan privasi resmi belum ditetapkan Karana. Pada versi demo, nama dan nomor WhatsApp pendaftar disimpan sementara di tab ini sampai ditutup atau pendaftaran dikirim. Kontak darurat dan catatan kesehatan tidak disimpan, dan belum ada pengamanan data di server.</p>
+          <button onclick="toStep(2)" class="btn btn-ember mt-5 w-full sm:w-auto">Lanjut ke pembayaran <i class="bx bx-right-arrow-alt text-lg" aria-hidden="true"></i></button>
+          <p class="mt-2 text-xs text-mute">Menekan tombol ini memulai simulasi tahan slot selama 2 jam. Belum ada pembayaran.</p>
+        </section>
+
+        <!-- Step 2 -->
+        <section id="s2" class="stp hidden" aria-labelledby="h-s2">
+          <h2 id="h-s2" class="mb-2 font-display text-3xl font-bold">Pembayaran</h2>
+          <p class="mb-5 text-mute">DP 50% dibayar saat mendaftar dan sisanya dilunasi di basecamp. Ketentuan DP dan opsi bayar lunas masih menunggu konfirmasi final Karana.</p>
+          <span class="label">Pilih pembayaran</span>
+          <div class="mb-5 grid grid-cols-2 gap-2">
+            <button type="button" class="tile p-4" id="payDp" aria-pressed="true" onclick="setPay('dp')"><p class="font-display text-2xl font-bold">DP 50%</p><p class="text-xs text-mute">Sisa lunas di basecamp</p></button>
+            <button type="button" class="tile p-4" id="payFull" aria-pressed="false" onclick="setPay('full')"><p class="font-display text-2xl font-bold">Lunas</p><p class="text-xs text-mute">Bayar penuh sekarang</p></button>
+          </div>
+          <div class="mb-5 border border-line bg-surface p-4">
+            <p class="label !mb-1 !text-ember">Rekening contoh (dummy), jangan transfer</p>
+            <div class="flex items-center justify-between gap-3"><div><p class="font-display text-2xl font-bold">BCA 1234 5678 90 <span class="pend">CONTOH</span></p><p class="text-sm text-mute">a.n. Karana Adventure (contoh)</p></div><button type="button" onclick="copyText('1234567890', 'Nomor contoh disalin. Jangan dipakai untuk transfer.', 'Nomor contoh 1234567890, jangan dipakai untuk transfer.')" class="btn btn-line !min-h-[40px] !px-3" aria-label="Salin nomor rekening contoh"><i class="bx bx-copy text-lg" aria-hidden="true"></i></button></div>
+            <p class="mt-3 text-sm">Nominal: <b id="payNominal" class="text-ember"></b></p>
+          </div>
+          <div class="field" id="upField">
+            <span class="label" id="upLabel">Bukti transfer DP</span>
+            <label class="flex cursor-pointer flex-col items-center gap-2 border border-dashed border-line px-4 py-7 text-center hover:border-ember" for="bFile"><i class="bx bx-cloud-upload text-4xl text-mute" aria-hidden="true"></i><span id="upText" class="text-sm text-mute">Ketuk untuk unggah foto bukti transfer (gambar, maks. 8 MB)</span></label>
+            <input id="bFile" type="file" accept="image/*" class="sr-only" onchange="onFile(this)">
+            <p class="mt-2 text-xs text-mute">Mode demo: file hanya diperiksa di perangkatmu dan tidak diunggah ke server.</p>
+            <img id="upPrev" class="mt-3 hidden max-h-40 border border-line object-contain" alt="Pratinjau bukti transfer" width="160" height="160">
+            <p id="upErr" class="err">Unggah foto bukti transfer sebelum mengirim.</p>
+          </div>
+          <div class="field mt-5" id="agreeField">
+            <label class="flex cursor-pointer items-start gap-3 text-sm"><input id="bAgree" type="checkbox" class="chk"><span>Saya setuju dengan <a href="#/syarat" target="_blank" rel="noopener" class="font-semibold text-ember underline">Syarat &amp; Ketentuan (buka di tab baru)</a>, termasuk kebijakan DP dan pembatalan.</span></label>
+            <p class="err">Centang persetujuan dulu untuk lanjut.</p>
+          </div>
+          <p class="mt-6 text-xs text-mute">Menekan tombol kirim menyimpan pendaftaran di perangkat ini dan menampilkan kode demo. Belum ada data yang terkirim ke Karana.</p>
+          <div class="mt-3 flex gap-3">
+            <button onclick="toStep(1)" class="btn btn-line" aria-label="Kembali ke data diri"><i class="bx bx-left-arrow-alt text-lg" aria-hidden="true"></i></button>
+            <button id="sendBtn" onclick="sendBooking()" class="btn btn-ember flex-1">Kirim pendaftaran (demo)</button>
+          </div>
+        </section>
+
+        <!-- Step 3 -->
+        <section id="s3" class="stp hidden" aria-labelledby="h-s3">
+          <div class="border border-brand/50 bg-brand/10 p-6 sm:p-8" role="status">
+            <i class="bx bxs-check-circle text-5xl text-brand" aria-hidden="true"></i>
+            <h2 id="h-s3" class="mt-2 font-display text-4xl font-extrabold leading-none">Pendaftaran tercatat (demo)</h2>
+            <p class="mt-3 text-mute">Datamu tersimpan di perangkat ini. Status pembayaran: menunggu verifikasi, belum terkonfirmasi. Pada versi live, pendaftaran baru terkonfirmasi setelah tim Karana memverifikasi bukti transfer. Simpan kode ini untuk cek status di perangkat yang sama.</p>
+            <p class="label mt-6 !mb-1">Kode pendaftaran demo</p>
+            <p id="bCode" class="font-display text-4xl font-extrabold tracking-widest text-ember"></p>
+            <p class="mt-4 text-xs text-mute">Mode demo: tidak ada data yang dikirim ke server, dan kode ini tidak mewakili transaksi asli.</p>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a id="bStatusLink" class="btn btn-ember"><i class="bx bx-search-alt text-lg" aria-hidden="true"></i> Cek Status Booking</a>
+            <a id="bWaLink" target="_blank" rel="noopener" class="btn btn-line"><i class="bx bxl-whatsapp text-lg" aria-hidden="true"></i> Kirim konfirmasi via WhatsApp</a>
+            <a href="#/" class="btn btn-line">Ke beranda</a>
+          </div>
+        </section>
+      </div>
+
+      <aside class="lg:sticky lg:top-24 lg:self-start" aria-label="Ringkasan pendaftaran">
+        <div class="border border-line bg-surface">
+          <div class="relative h-28 overflow-hidden bg-[#1b221e]"><img id="tkImg" class="h-full w-full max-w-full object-cover" alt="" width="600" height="112"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><p id="tkName" class="absolute bottom-3 left-4 font-display text-3xl font-extrabold leading-none text-white"></p></div>
+          <dl class="space-y-3 p-4 text-sm">
+            <div class="flex justify-between gap-3"><dt class="text-mute">Tanggal</dt><dd id="tkTgl" class="text-right font-semibold"></dd></div>
+            <div class="flex justify-between gap-3"><dt class="text-mute">Paket / titik</dt><dd id="tkTitik" class="text-right font-semibold"></dd></div>
+            <div class="flex justify-between gap-3"><dt class="text-mute">Peserta</dt><dd id="tkQty" class="font-semibold"></dd></div>
+            <div class="flex justify-between gap-3 border-t border-dashed border-line pt-3"><dt class="text-mute">Total</dt><dd id="tkTotal" class="font-semibold"></dd></div>
+            <div class="flex items-end justify-between gap-3"><dt class="text-mute">Nominal pembayaran</dt><dd id="tkPay" class="font-display text-3xl font-extrabold leading-none text-ember"></dd></div>
+          </dl>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- ============ STATUS ============ -->
+<main id="p-status" class="page">
+  <div class="mx-auto max-w-2xl px-5 py-10 pb-16">
+    <p class="text-xs font-semibold uppercase tracking-[.25em] text-ember">Pendaftaran</p>
+    <h1 class="mb-3 font-display text-4xl sm:text-6xl">Cek status booking</h1>
+    <p class="mb-6 text-mute">Masukkan kode pendaftaran dari halaman konfirmasi. Mode demo: kode hanya bisa dicek di perangkat dan browser tempat kamu mendaftar. Coba kode contoh <b class="text-fg">KRN-DEMO</b>.</p>
+    <form id="statusForm" class="mb-8 flex flex-col gap-3 sm:flex-row" novalidate>
+      <div class="field flex-1"><label class="label" for="sKode">Kode pendaftaran</label><input id="sKode" class="input uppercase" placeholder="KRN-XXXX" autocomplete="off"><p class="err">Kode tidak ditemukan di perangkat ini. Cek penulisannya, atau tanya admin via WhatsApp.</p></div>
+      <button class="btn btn-ember sm:mt-[1.65rem]" type="submit">Cek status</button>
+    </form>
+    <div id="sResult" aria-live="polite"></div>
+    <section class="mt-10 border-t border-line pt-6" aria-labelledby="h-data">
+      <h2 id="h-data" class="font-display text-2xl font-bold">Data di perangkat ini</h2>
+      <p class="prose-s mt-2 text-sm text-mute">Pada versi demo, pendaftaran dan data minat (nama dan nomor WhatsApp) hanya disimpan di browser perangkat ini. Kamu bisa menghapusnya kapan saja. Data tidak ada di server, jadi tidak bisa dipulihkan setelah dihapus.</p>
+      <button type="button" id="clearBtn" onclick="clearLocalData(this)" class="btn btn-line mt-3">Hapus data demo di perangkat ini</button>
+    </section>
+  </div>
+</main>
+
+<!-- ============ SYARAT ============ -->
+<main id="p-syarat" class="page">
+  <article class="mx-auto max-w-3xl px-5 py-10 pb-16">
+    <!-- TODO-KARANA (wajib disetujui sebelum launching):
+         1. DP 50% untuk semua gunung (poster memakai nominal DP dan jadwal pelunasan H-7/H-3/H-1).
+         2. Penahanan slot 2 jam.
+         3. DP hangus 100% vs refund penuh yang mensyaratkan peserta pengganti: kedua aturan belum selaras, jangan digabung tanpa keputusan Karana.
+         4. Pembatalan H-1 dan kewajiban pelunasan.
+         5. Batas usia minimum per trip.
+         6. Pernyataan penggunaan data pribadi. -->
+    <p class="text-xs font-semibold uppercase tracking-[.25em] text-ember">Legal</p>
+    <h1 class="mb-3 font-display text-4xl sm:text-6xl">Syarat &amp; ketentuan</h1>
+    <p class="mb-8 border border-ember/60 bg-ember/10 p-3 text-sm">Draf ini disusun dari materi resmi Karana Adventure (poster IG) dan alur pendaftaran di situs ini. Poin bertanda <span class="pend !ml-0">Perlu konfirmasi Karana</span> wajib disetujui Karana sebelum launching. Isi final menunggu kebijakan resmi.</p>
+    <div class="space-y-8">
+      <section aria-labelledby="sk1"><h2 id="sk1" class="font-display text-3xl font-bold">1. Pendaftaran dan pembayaran</h2><ul class="prose-s mt-2 list-disc space-y-1.5 pl-5 text-mute"><li>Slot ditahan selama 2 jam setelah data diri diisi. Jika bukti transfer tidak dikirim, slot dilepas otomatis. <span class="pend">Perlu konfirmasi Karana</span> Di versi demo, penahanan slot hanya simulasi.</li><li>DP sebesar 50% dibayar saat mendaftar, sisanya dilunasi di basecamp sebelum pendakian. <span class="pend">Perlu konfirmasi Karana</span></li><li>Pendaftaran sah setelah bukti transfer diverifikasi tim Karana. Booking tanpa DP tidak diterima; peserta yang lebih dulu transfer DP langsung tercatat.</li><li>Jika ada kenaikan harga mendadak dari pihak transportasi atau yang berkaitan dengan trip (misalnya libur Lebaran, Natal, tahun baru), harga disesuaikan lewat persetujuan Karana dan calon peserta.</li></ul></section>
+      <section aria-labelledby="sk2"><h2 id="sk2" class="font-display text-3xl font-bold">2. Pembatalan dan refund <span class="pend">Perlu konfirmasi Karana</span></h2><ul class="prose-s mt-2 list-disc space-y-1.5 pl-5 text-mute"><li>Jika peserta membatalkan sepihak, DP hangus 100%, kecuali peserta sakit (melampirkan surat sakit dan obat) atau mengalami musibah besar dalam keluarga atau individu.</li><li>Jika trip dibatalkan oleh Karana (misalnya kuota peserta kurang), pembayaran dikembalikan 100%.</li><li>Refund penuh mengharuskan peserta mencari peserta pengganti. Pembatalan di H-1 mewajibkan pembayaran penuh sesuai kekurangan DP pada harga trip.</li><li>Jika terjadi force majeure sehingga pendakian tertunda atau batal, keputusan diambil lewat musyawarah mufakat.</li></ul></section>
+      <section aria-labelledby="sk3"><h2 id="sk3" class="font-display text-3xl font-bold">3. Kondisi peserta</h2><ul class="prose-s mt-2 list-disc space-y-1.5 pl-5 text-mute"><li>Peserta wajib dalam kondisi sehat dan tidak memiliki riwayat kesehatan yang membahayakan diri sendiri atau peserta lain.</li><li>Batas usia minimum mengikuti ketentuan tiap trip. Peserta di bawah umur wajib didampingi. <span class="pend">Perlu konfirmasi Karana</span></li><li>Leader berhak menghentikan pendakian peserta demi keselamatan kelompok.</li></ul></section>
+      <section aria-labelledby="sk4"><h2 id="sk4" class="font-display text-3xl font-bold">4. Aturan selama trip</h2><ul class="prose-s mt-2 list-disc space-y-1.5 pl-5 text-mute"><li>Panitia berhak menegur peserta yang melanggar aturan dan norma.</li><li>Panitia berhak mengeluarkan dan memulangkan peserta yang mengganggu keamanan dan kenyamanan staf maupun peserta lain.</li><li>Peserta dilarang membawa obat-obatan terlarang, narkotika, senjata api, atau benda yang membahayakan keselamatan, sesuai undang-undang yang berlaku di Indonesia. Panitia berhak membawa pelanggar ke pihak berwajib.</li><li>Peserta yang menghilangkan atau merusak alat dan fasilitas wajib menggantinya sesuai nominal harga alat.</li><li>Seluruh peserta wajib mematuhi aturan Taman Nasional atau lokasi trip dan arahan lisan tour leader yang bertugas.</li><li>Selama di jalur pendakian, sesama peserta saling membantu, kompak, dan menjaga kebersamaan.</li></ul></section>
+      <section aria-labelledby="sk5"><h2 id="sk5" class="font-display text-3xl font-bold">5. Cuaca, force majeure, dan tanggung jawab</h2><ul class="prose-s mt-2 list-disc space-y-1.5 pl-5 text-mute"><li>Keputusan lanjut atau tunda mengikuti arahan pengelola taman nasional atau basecamp. Perubahan jadwal akibat force majeure diinformasikan lewat WhatsApp sesegera mungkin.</li><li>Force majeure mencakup keadaan di luar kemampuan kedua belah pihak, seperti bencana alam, peperangan, pemogokan, sabotase, blokade, dan kebijakan pemerintah.</li><li>Keterlambatan atau masalah transportasi di luar kendali Karana menjadi tanggung jawab pihak transportasi.</li><li>Panitia tidak bertanggung jawab atas kerusakan, kehilangan, atau keterlambatan barang peserta oleh maskapai, kereta, bus, atau hotel; hangusnya tiket akibat mundurnya jadwal; hilangnya barang pribadi (dompet, paspor, uang, perhiasan, kamera, ponsel, dan lainnya); serta risiko bahaya yang timbul dari diri sendiri, alam, dan sekitarnya, yang menjadi tanggung jawab masing-masing peserta.</li><li>Mendaki gunung mengandung risiko. Informasi di situs ini bukan jaminan bebas risiko.</li></ul></section>
+      <section aria-labelledby="sk6"><h2 id="sk6" class="font-display text-3xl font-bold">6. Data pribadi <span class="pend">Draf, menunggu teks resmi Karana</span></h2><p class="prose-s mt-2 text-mute">Draf: data peserta hanya digunakan untuk keperluan perjalanan (perizinan, grup keberangkatan, dan keselamatan) dan tidak dibagikan ke pihak lain di luar keperluan tersebut. Karana belum menetapkan kebijakan privasi resmi, termasuk lama penyimpanan dan pihak yang dapat mengakses data.</p><p class="prose-s mt-2 text-mute">Pada versi demo ini tidak ada data yang dikirim ke server. Nama, jumlah peserta, dan status pendaftaran disimpan di browser perangkat peserta dan bisa dihapus lewat halaman <a href="#/status" class="font-semibold text-ember underline">Cek status booking</a>. Kontak darurat dan catatan kesehatan tidak disimpan. Pengamanan data di server menjadi pekerjaan tahap berikutnya.</p></section>
+    </div>
+  </article>
+</main>
+
+<footer class="border-t border-line bg-surface" id="footer">
+  <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-5 py-12 sm:flex-row sm:items-center">
+    <div><p class="font-display text-3xl">Masih ada yang mau ditanyakan?</p><p class="mt-2 text-mute">Tanya jadwal, harga, atau perlengkapan lewat WhatsApp.</p><p class="mt-2 text-sm text-mute" lang="en">Let's hike higher and life deeper with us.</p></div>
+    <div class="flex flex-wrap gap-3"><a id="footWa" href="#" target="_blank" rel="noopener" class="btn btn-ember"><i class="bx bxl-whatsapp text-lg" aria-hidden="true"></i> Tanya via WhatsApp</a><span class="js-social contents"></span></div>
+  </div>
+  <div class="mx-auto flex max-w-6xl flex-wrap gap-x-6 gap-y-2 border-t border-line px-5 py-5 text-sm text-mute">
+    <a href="#/syarat" class="inline-flex min-h-[44px] items-center hover:text-fg">Syarat &amp; ketentuan</a><a href="#/status" class="inline-flex min-h-[44px] items-center hover:text-fg">Cek status booking</a><span class="js-social-text flex gap-x-6"></span><span class="ml-auto self-center">© Karana Adventure</span>
+  </div>
+</footer>
+</div>
+
+<!-- WA melayang -->
+<a id="waFloat" class="wa" href="#" target="_blank" rel="noopener" aria-label="Tanya via WhatsApp"><i class="bx bxl-whatsapp text-3xl" aria-hidden="true"></i></a>
+
+<!-- Lightbox -->
+<div id="menu" class="fixed inset-0 z-[85] hidden" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="absolute inset-0 bg-black/55" onclick="ovBack()"></div>
+  <div class="menu-panel absolute right-0 top-0 flex h-full w-[82%] max-w-sm flex-col border-l border-line bg-bg p-6">
+    <div class="mb-6 flex items-center justify-between"><p class="font-display text-xl">Menu</p><button onclick="ovBack()" class="grid h-11 w-11 place-items-center border border-line" aria-label="Tutup menu"><i class="bx bx-x text-xl" aria-hidden="true"></i></button></div>
+    <ul class="divide-y divide-line text-lg">
+      <li><button class="flex w-full items-center gap-3 py-4 text-left" onclick="menuGo(()=>jump('jadwal'))"><i class="bx bx-calendar text-xl text-mute" aria-hidden="true"></i>Jadwal trip</button></li>
+      <li><button class="flex w-full items-center gap-3 py-4 text-left" onclick="menuGo(()=>{ openTab('private'); jump('jadwal'); })"><i class="bx bx-group text-xl text-mute" aria-hidden="true"></i>Private trip</button></li>
+      <li><button class="flex w-full items-center gap-3 py-4 text-left" onclick="menuGo(()=>jump('cara'))"><i class="bx bx-list-check text-xl text-mute" aria-hidden="true"></i>Cara daftar</button></li>
+      <li><button class="flex w-full items-center gap-3 py-4 text-left" onclick="menuGo(()=>jump('testi'))"><i class="bx bx-chat text-xl text-mute" aria-hidden="true"></i>Testimoni</button></li>
+      <li><button class="flex w-full items-center gap-3 py-4 text-left" onclick="menuGo(()=>jump('faq'))"><i class="bx bx-help-circle text-xl text-mute" aria-hidden="true"></i>FAQ</button></li>
+      <li><button class="flex w-full items-center gap-3 py-4 text-left" onclick="menuGo(()=>navigate('status'))"><i class="bx bx-search-alt text-xl text-mute" aria-hidden="true"></i>Cek status booking</button></li>
+      <li><button class="flex w-full items-center gap-3 py-4 text-left" onclick="menuGo(()=>navigate('syarat'))"><i class="bx bx-file text-xl text-mute" aria-hidden="true"></i>Syarat &amp; ketentuan</button></li>
+    </ul>
+    <a id="menuWa" target="_blank" rel="noopener" class="btn btn-ember mt-auto"><i class="bx bxl-whatsapp text-lg" aria-hidden="true"></i> Tanya via WhatsApp</a>
+  </div>
+</div>
+<div id="lb" class="fixed inset-0 z-[90] hidden flex-col items-center justify-center bg-black/95" role="dialog" aria-modal="true" aria-label="Galeri foto">
+  <button onclick="lbClose()" class="absolute right-4 top-4 grid h-11 w-11 place-items-center border border-white/30 text-white" aria-label="Tutup galeri"><i class="bx bx-x text-2xl" aria-hidden="true"></i></button>
+  <img id="lbImg" class="max-h-[78vh] max-w-[94vw] object-contain" alt="">
+  <div class="mt-5 flex items-center gap-6 text-white">
+    <button onclick="lbNav(-1)" class="grid h-11 w-11 place-items-center border border-white/30" aria-label="Foto sebelumnya"><i class="bx bx-chevron-left text-2xl" aria-hidden="true"></i></button>
+    <span id="lbCount" class="text-sm tabular-nums opacity-80"></span>
+    <button onclick="lbNav(1)" class="grid h-11 w-11 place-items-center border border-white/30" aria-label="Foto berikutnya"><i class="bx bx-chevron-right text-2xl" aria-hidden="true"></i></button>
+  </div>
+</div>
+
+<!-- Sheet: tertarik / daftar tunggu -->
+<div id="interest" class="sheet-bg" onclick="if(event.target===this)closeInterest()">
+  <form class="sheet space-y-4" id="intForm" novalidate role="dialog" aria-modal="true" aria-labelledby="intTitle">
+    <div class="flex items-start justify-between gap-3"><div><p id="intKicker" class="text-xs font-semibold uppercase tracking-[.25em] text-ember">Kabari saya</p><p id="intTitle" class="font-display text-3xl font-bold leading-none"></p></div><button type="button" onclick="closeInterest()" class="grid h-11 w-11 shrink-0 place-items-center border border-line" aria-label="Tutup"><i class="bx bx-x text-xl" aria-hidden="true"></i></button></div>
+    <p id="intDesc" class="text-sm text-mute"></p>
+    <div class="field"><label class="label" for="iNama">Nama</label><input id="iNama" class="input" autocomplete="name"><p class="err">Nama wajib diisi.</p></div>
+    <div class="field"><label class="label" for="iWa">WhatsApp</label><input id="iWa" class="input" inputmode="tel" autocomplete="tel" placeholder="0812xxxxxxxx"><p class="err">Nomor belum valid. Contoh: 0812xxxxxxxx atau +62812xxxxxxxx.</p></div>
+    <button class="btn btn-ember w-full" type="submit" id="intBtn">Kabari saya</button>
+    <a id="intWa" target="_blank" rel="noopener" class="btn btn-line w-full"><i class="bx bxl-whatsapp text-lg" aria-hidden="true"></i> Tanya admin via WhatsApp</a>
+  </form>
+</div>
+
+<div id="pick" class="sheet-bg" onclick="if(event.target===this)closePick()">
+  <div class="sheet flex !max-h-[88vh] flex-col !p-0" role="dialog" aria-modal="true" aria-labelledby="pickTitle">
+    <div class="flex items-center justify-between gap-3 px-5 pb-3 pt-5"><p id="pickTitle" class="font-display text-3xl font-bold leading-none">Mau ke mana?</p><button type="button" onclick="closePick()" class="grid h-11 w-11 place-items-center rounded-full border border-line text-xl" aria-label="Tutup"><i class="bx bx-x" aria-hidden="true"></i></button></div>
+    <div class="px-5 pb-3"><label class="sr-only" for="pickQ">Cari gunung</label><div class="flex items-center gap-2 rounded-full border border-line bg-surface px-4"><i class="bx bx-search text-lg text-mute" aria-hidden="true"></i><input id="pickQ" type="search" class="min-h-[44px] w-full bg-transparent text-sm outline-none" placeholder="Cari gunung atau jalur" oninput="renderPick()" autocomplete="off"></div></div>
+    <p id="pickCount" class="sr-only" role="status"></p>
+    <div id="pickList" class="min-h-0 flex-1 overflow-y-auto px-3 pb-5" role="group" aria-label="Pilih gunung"></div>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ================= DATA (satu sumber untuk list, detail, booking, SEO) =================
+   Sumber: poster IG @karana.adventure (Jadwal Okt–Des 2026, Raung, Rinjani, Private Trip).
+   CONTOH (dummy): sisa slot/kuota, foto, profil leader, testimoni, rekening. */
+/* NEEDS_CONFIRMATION (menunggu data/keputusan resmi Karana; jangan dianggap fakta sebelum disetujui):
+   - Nomor WA admin (WA), rekening (dummy), kuota (KUOTA_CONTOH), profil leader dummy dan PENUGASAN leader per trip (LEADERS, mk()), testimoni (TESTI), founder dan kutipan, SAFETY, foto.
+   - Harga vs titik kumpul: trip camp (mis. Gede) berharga per PAKET (Hemat/Lengkap) dan daftar kota kumpul (CAMP_MEET) tidak berharga. Konfirmasi ke poster Karana apakah kota kumpul memengaruhi harga di trip camp; jika ya, model data camp harus diubah seperti tektok (titik = kota).
+   - Kebijakan: DP 50%, opsi Lunas, tahan slot 2 jam, DP hangus vs refund, pembatalan H-1, batas usia, pernyataan data pribadi, Rinjani "booking maksimal H-1 bulan".
+   - Data trip: Raung (rentang tanggal tumpang tindih pada Surabaya dan Kalibaru, pemetaan harga ke meeting point, "Maksimal 6 pax"), Sunan Ibu harga basecamp, Rinjani titik Surabaya/Bandara Lombok (tanggal kumpul), Rinjani hari 8 (arah kapal Jangkar-Lembar), tagline footer berbahasa Inggris.
+   - Jadwal statis tahun 2026: setelah lewat, kartu otomatis "Jadwal belum dibuka". Perbarui parseJ() saat jadwal baru dari poster tersedia. */
+/* Sosmed: kosongkan string kalau akun tidak dipakai (tombolnya otomatis hilang) */
+/* DEMO_MODE: true selama backend belum ada. Mengaktifkan penanda simulasi di pesan WhatsApp. TODO-LAUNCH: ubah ke false saat backend tersambung dan teks demo dibersihkan. */
+const DEMO_MODE = true;
+const demoTag = DEMO_MODE ? '[Simulasi situs] ' : '';
+const SOSMED = { instagram:'https://www.instagram.com/karana.adventure', tiktok:'https://www.tiktok.com/@karanaadventure' };
+/* TODO-DOMAIN: BASE masih placeholder. Ganti dengan domain resmi bersama canonical, og:url, dan og:image di <head>.
+   SEO_LIVE: false = semua halaman noindex (domain placeholder, isi masih contoh). TODO-LAUNCH: ubah ke true saat domain dan data asli siap. */
+const BASE = 'https://karanaadventure.example';
+const SEO_LIVE = false;
+const WA = '6285188431329'; /* TODO-KARANA: nomor sementara, konfirmasi nomor resmi admin */
+/* Foto lokal: simpan di folder img/. Kalau file belum ada, otomatis pakai foto contoh (Unsplash). */
+const loc = (file, fallback) => `src="${file}" onerror="sampleImg(this,'${fallback}')"`;
+const u = (id, w = 900) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
+const P = { a:'photo-1483728642387-6c3bdd6c93e5', b:'photo-1551632811-561732d1e306', c:'photo-1533240332313-0db49b459ad6', d:'photo-1454496522488-7a8e488e8606', e:'photo-1506905925346-21bda4d32df4', f:'photo-1464822759023-fed622ff2c3b' };
+const PHOTOS = Object.values(P);
+const LEADERS = {
+  ridwan: { nama:'Ridwan S.', info:'40+ summit · sertifikasi P3K gunung', foto:'photo-1607346256330-dee7af15f7c5' },
+  aditya: { nama:'Aditya P.', info:'6 tahun memandu · spesialis jalur teknikal', foto:'photo-1500648767791-00dcc994a43e' },
+  /* leader asli: unggah foto ke img/leader-syhrllh.jpg. Isi nama lengkap dan info pengalaman kalau sudah ada. */
+  syhrllh: { nama:'@iam_syhrllh', info:'Trip leader Karana Adventure', foto:'photo-1500648767791-00dcc994a43e', file:'img/leader-syhrllh.jpg', ig:'https://www.instagram.com/iam_syhrllh', real:true }
+};
+const KAT = { camp:'Camp', tektok:'Tektok', raung:'Raung', overland:'Overland' };
+const KUOTA_CONTOH = 15; /* DUMMY: kuota asli belum diberikan klien */
+const hash = s => { let h = 2166136261; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
+
+/* "10:9-11,16-18;11:6-8" => daftar keberangkatan (bulan:tanggal-mulai-selesai). Rentang lintas bulan: "30-1". */
+function parseJ(spec, extra = {}) {
+  const out = [];
+  spec.split(';').forEach(part => {
+    const [m, list] = part.split(':'), dim = new Date(2026, +m, 0).getDate();
+    list.split(',').forEach(r => {
+      const [a, b = a] = r.split('-').map(Number);
+      out.push({ tgl:`2026-${m.padStart(2, '0')}-${String(a).padStart(2, '0')}`, hari:b >= a ? b - a + 1 : dim - a + b + 1, ...extra });
+    });
+  });
+  return out;
+}
+let heroI = 0;
+const mk = t => {
+  t.hero = PHOTOS[heroI % PHOTOS.length];
+  t.gallery = [0, 1, 2, 3, 4, 5].map(k => PHOTOS[(heroI + k) % PHOTOS.length]);
+  t.leader = t.leader || (['ridwan', 'aditya', 'syhrllh'][heroI % 3]); heroI++;
+  t.jadwal = (t.jadwal || []).sort((a, b) => a.tgl < b.tgl ? -1 : a.tgl > b.tgl ? 1 : 0);
+  t.jadwal.forEach(d => {
+    d.key = t.id + '|' + d.tgl + '|' + (d.mp || '');
+    d.total = KUOTA_CONTOH; d.terisi = Math.floor(((hash(d.key) % 1000) / 1000) ** 1.5 * (KUOTA_CONTOH + 1)); d.ditahan = 0; /* terisi = contoh */
+    d.wk = [1, 2, 3, 4].includes(new Date(d.tgl + 'T00:00:00').getDay()); /* Senin–Kamis = weekday (warna kuning di poster) */
+  });
+  return t;
+};
+
+/* Paket A (Sharecost) = Paket Hemat: transport patungan. Paket B (Full trip) = Paket Lengkap: transport sudah termasuk. */
+const PAKET = (a, b) => [{ n:'Paket Hemat', sub:'Transport patungan', h:a }, { n:'Paket Lengkap', sub:'Transport sudah termasuk', h:b }];
+const CAMP_MEET = ['Bogor', 'Jakarta', 'Bandung', 'Yogyakarta', 'Surabaya', 'Basecamp'].map(kota => ({ kota }));
+const camp = (id, gunung, jalur, spec, a, b) => mk({ id, kat:'camp', gunung, jalur, jadwal:parseJ(spec), titikLabel:'Pilih paket', titik:PAKET(a * 1000, b * 1000), meeting:CAMP_MEET });
+
+const TEK_TGL = '10:4,11,18,21,25;11:1,8,15,22,25,29;12:6,13,20,23,27';
+const TEK_MEET = [{ kota:'Basecamp', mp:'bc' }, { kota:'Bogor', mp:'jb' }, { kota:'Jakarta', mp:'jb' }, { kota:'Bandung', mp:'jb' }];
+const tektok = (id, gunung, jalur, spec, bc, jb) => mk({ id, kat:'tektok', gunung, jalur, jadwal:parseJ(spec), titikLabel:'Pilih titik kumpul',
+  titik:[bc ? { n:'Kumpul di basecamp', h:bc * 1000, mp:'bc' } : null, { n:'Kumpul di Jabodetabek', sub:'Bogor · Jakarta · Bandung', h:jb * 1000, mp:'jb' }].filter(Boolean),
+  meeting:TEK_MEET, catatan:['Keberangkatan tektok minimal 7 peserta.'].concat(bc ? [] : ['Harga titik basecamp belum tersedia.']) });
+
+const RINJANI_ITI = [
+  ['Hari 1 · Keberangkatan', 'Berangkat dari meeting point Cawang UKI (10.00–11.00). Penjemputan di Bekasi, Cikarang, Karawang, dan Bandung (11.00–13.00), lalu perjalanan menuju Pelabuhan Jangkar, Situbondo.'],
+  ['Hari 2 · Penyeberangan Jawa–Lombok', 'Persiapan penyeberangan Jawa–Lombok, kemudian perjalanan menuju Pelabuhan Lembar (mulai 12.00).'],
+  ['Hari 3 · Tiba di Lombok, tour destinasi', 'Tiba di Pelabuhan Lembar. Tour Lombok: Bukit Marese, Mandalika, dan Desa Sade (05.00–14.00). Lanjut ke basecamp Sembalun (14.00–17.00), istirahat, free time, repacking, dan persiapan (17.00–21.00).'],
+  ['Hari 4 · Pendakian Rinjani menuju Pelawangan', 'Sarapan dan persiapan (05.00–07.00), registrasi check-in resort Sembalun (07.00–08.00). Pickup ke Kandang Sapi, trekking Pintu Rimba menuju Pelawangan dan Shelter 3 (camp) pukul 08.00–17.00. Sunset, makan malam, lalu istirahat dan repacking summit (17.00–01.00).'],
+  ['Hari 5 · Summit attack', 'Bangun dan sarapan (12.30–01.00), summit dan tiba di puncak Rinjani (01.00–08.00), trekking kembali ke campsite (08.00–11.00). ISHOMA, lalu trekking ke Danau Segara Anak (12.00–16.00). Menikmati Segara Anak, makan malam, dan tidur.'],
+  ['Hari 6 · Turun dan pulang', 'Sarapan dan menikmati Segara Anak (05.00–10.00), trekking menuju campsite Torean (10.00–16.00). Makan malam, sharing session, dan istirahat.'],
+  ['Hari 7 · Torean – basecamp – Gili Trawangan', 'Trekking turun Torean ke basecamp (05.00–11.00), ISHOMA, lalu penyeberangan ke Gili Trawangan (13.00–15.30). Free time dan istirahat di Gili Trawangan.'],
+  ['Hari 8 · Gili Trawangan – Lembar', 'Menikmati Gili Trawangan (05.00–09.00), kumpul dan penyeberangan, pusat oleh-oleh dan kulineran (10.00–13.00). Perjalanan ke Pelabuhan Lembar (13.00–15.00), menunggu kapal ke Pelabuhan Jangkar, penyeberangan Jangkar–Lembar.'],
+  ['Hari 9 · Perjalanan pulang', 'Perjalanan menuju meeting point masing-masing.'],
+  ['Hari 10 · Perjalanan pulang', 'Perkiraan tiba di meeting point masing-masing sebelum pukul 12.00.']
+];
+
+const TRIPS = [
+  camp('gede', 'Gunung Gede', 'via Putri', '10:9-11,16-18,19-21,23-25;11:6-8,13-15,20-22,23-25,27-29', 500, 650),
+  camp('merbabu-selo', 'Gunung Merbabu', 'via Thekelan / Selo', '10:9-11,19-21,23-25,30-1;11:6-8,13-15,27-29', 750, 830),
+  camp('merbabu-suwanting', 'Gunung Merbabu', 'via Suwanting', '10:9-11,19-21,23-25;11:6-8,13-15,23-25,27-29', 750, 850),
+  camp('sindoro', 'Gunung Sindoro', 'via Kledung', '10:9-11,19-21,23-25,30-1;11:13-15,20-22,23-25,27-29', 570, 700),
+  camp('sumbing-gajah-mungkur', 'Gunung Sumbing', 'via Gajah Mungkur', '10:9-11,19-21,23-25,30-1;11:13-15,20-22,23-25,27-29', 570, 750),
+  camp('sumbing-garung', 'Gunung Sumbing', 'via Garung', '10:9-11,19-21,23-25,30-1;11:13-15,20-22,23-25,27-29', 570, 700),
+  camp('slamet', 'Gunung Slamet', 'via Bambangan', '10:5-7,9-11,19-21,23-25,30-1;11:13-15,20-22,23-25,27-29', 550, 750),
+  camp('prau', 'Gunung Prau', 'via Wates / Patak Banteng', '10:9-11,16-18,19-21,23-25;11:13-15,20-22,23-25,27-29', 570, 700),
+  camp('lawu', 'Gunung Lawu', 'via Ceto', '10:19-21,23-25;11:23-25,27-29', 750, 850),
+  camp('ciremai', 'Gunung Ciremai', 'via Sadarehe', '10:19-21,23-25;11:23-25,27-29', 750, 850),
+
+  tektok('gede-tektok', 'Gunung Gede', 'via Putri', TEK_TGL, 300, 380),
+  tektok('kawah-ratu', 'Kawah Ratu', '', TEK_TGL, 220, 280),
+  tektok('papandayan', 'Gunung Papandayan', '', TEK_TGL, 200, 380),
+  tektok('ciremai-tektok', 'Gunung Ciremai', '', '10:4,11,18,21,25;11:8,15,22,25,29;12:6,13,20,23,27', 300, 480),
+  tektok('sunan-ibu', 'Sunan Ibu + Citambur', '', TEK_TGL, 0, 500),
+
+  mk({ id:'raung', kat:'raung', gunung:'Gunung Raung', jalur:'via Kalibaru', mdpl:3344, tagline:'Gunung paling ekstrem di Jawa', titikLabel:'Pilih meeting point',
+    jadwal:[
+      ...parseJ('11:3-8,25-30;12:1-6,22-28', { mp:'jb' }),
+      ...parseJ('11:5-8,19-22,26-29;12:3-6,17-20,23-25,24-27', { mp:'sby' }),
+      ...parseJ('11:2-4,6-8,13-15,20-22,23-25,27-29;12:4-6,11-13,18-20,23-25,25-27,28-30', { mp:'klb' })
+    ],
+    titik:[
+      { n:'Jabodetabek · Paket Hemat', sub:'Transport patungan', h:1200000, mp:'jb' },
+      { n:'Jabodetabek · Paket Lengkap', sub:'Transport sudah termasuk', h:2300000, mp:'jb' },
+      { n:'Surabaya · Paket Lengkap', sub:'Transport sudah termasuk', h:2000000, mp:'sby' },
+      { n:'Stasiun Kalibaru · Paket Lengkap', sub:'Transport sudah termasuk', h:1300000, mp:'klb' }
+    ],
+    meeting:[{ kota:'Jakarta – Bandung', mp:'jb' }, { kota:'Surabaya', lokasi:'Bandara Internasional Juanda', mp:'sby' }, { kota:'Surabaya', lokasi:'Stasiun Pasar Turi', mp:'sby' }, { kota:'Kalibaru', lokasi:'Stasiun Kalibaru', mp:'klb' }],
+    catatan:['Tersedia weekday dan weekend.', 'Jadwal Januari 2027 menyusul.'],
+    inc:['Transport Elf/Hiace', 'Simaksi', 'Tenda', 'Makan selama pendakian', 'Safety harness', 'Ojek basecamp ke Pos 1', 'Guide profesional', 'Breakfast dan kopi', 'Porter team', 'Dokumentasi profesional', 'Air mineral 3 liter'],
+    exc:['Surat keterangan sehat', 'Perlengkapan pribadi', 'Porter pribadi'] }),
+
+  mk({ id:'rinjani', kat:'overland', gunung:'Gunung Rinjani', jalur:'Sembalun lintas Torean', mdpl:3726, titikLabel:'Pilih meeting point',
+    jadwal:[{ tgl:'2026-12-20', hari:10 }],
+    titik:[
+      { n:'Bandara Lombok', h:1700000, durasi:'6 hari 5 malam', mp:'lbk' },
+      { n:'Surabaya', h:2000000, durasi:'9 hari 8 malam', mp:'sby' },
+      { n:'Jakarta – Bandung', h:2700000, durasi:'10 hari 9 malam', mp:'jb' },
+      { n:'Jabodetabek · Paket Hemat', sub:'Transport patungan', h:1900000, durasi:'10 hari 9 malam', mp:'jb' }
+    ],
+    meeting:[
+      { kota:'Bandara Lombok', mp:'lbk' }, { kota:'Surabaya', mp:'sby' },
+      { kota:'Jakarta', lokasi:'Cawang UKI', jam:'10.00', mp:'jb' },
+      { kota:'Bekasi', lokasi:'Penjemputan 11.00–13.00 WIB', nomap:true, mp:'jb' }, { kota:'Cikarang', lokasi:'Penjemputan 11.00–13.00 WIB', nomap:true, mp:'jb' },
+      { kota:'Karawang', lokasi:'Penjemputan 11.00–13.00 WIB', nomap:true, mp:'jb' }, { kota:'Bandung', lokasi:'Penjemputan 11.00–13.00 WIB', nomap:true, mp:'jb' }
+    ],
+    catatan:['Booking maksimal H-1 bulan sebelum keberangkatan.', 'Peserta wajib sehat jasmani, tanpa riwayat asma, jantung, epilepsi, atau AMS.', 'Minimal keberangkatan dari Jakarta 18 orang. Jika kursi tidak penuh, ada penambahan biaya.', 'Bisa request tanggal atau private trip.', 'Itinerary di bawah untuk rute 10 hari dari Jakarta. Titik kumpul Surabaya dan Bandara Lombok berdurasi lebih singkat, konfirmasikan tanggal kumpulnya lewat WhatsApp.'],
+    iti:RINJANI_ITI,
+    inc:['Transportasi meeting point ke basecamp (PP)', 'Kapal penyeberangan Jangkar–Lembar (PP)', 'Rumah singgah', 'Registrasi pendakian Rinjani 4H3M', 'Pickup Sembalun ke Kandang Sapi', 'Tenda kap (3–4 orang)', 'Porter, chef, dan HT team', 'Alat makan dan minum', 'Welcome drink (teh hangat)', 'Welcome snack (pisang keju)', 'Makan di camp 7x', 'Sop buah', 'Sarapan summit 1x', 'P3K standar dan oksigen', 'Souvenir Karana Adventure', 'Tim dokumentasi kamera / drone', 'Guide dan sweeper team', 'Crew friendly'],
+    exc:['Perlengkapan pribadi', 'Surat keterangan sehat', 'Porter pribadi', 'Hal lain yang tidak tertera di termasuk', 'Kapal ke Gili Trawangan', 'Ojek Kandang Sapi ke Pos 2', 'Ojek Pintu Hutan ke Desa Torean'] }),
+
+  /* Coming soon: harga dari poster Overland, jadwal dan detail belum ada */
+  mk({ id:'kerinci', kat:'overland', soon:true, gunung:'Gunung Kerinci', jalur:'', titikLabel:'Harga per meeting point',
+    titik:[{ n:'Basecamp', h:1000000 }, { n:'Padang', h:1750000 }, { n:'Jabodetabek · Paket Hemat', sub:'Transport patungan', h:1800000 }, { n:'Jabodetabek', h:2300000 }], meeting:[] }),
+  mk({ id:'banyuwangi', kat:'overland', soon:true, gunung:'Explore Banyuwangi', jalur:'', titikLabel:'Harga per meeting point',
+    titik:[{ n:'Banyuwangi', h:1350000 }, { n:'Surabaya', h:1900000 }, { n:'Jabodetabek', h:2500000 }], meeting:[] })
+];
+
+/* Private Trip: harga per orang (ribuan rupiah) untuk 1, 2, ... 9, 10–20 peserta */
+const PV = {
+  economy:{ nama:'Economy', h:[1500, 1200, 1000, 900, 800, 700, 700, 650, 600, 600],
+    fas:['Fasilitas basecamp (toilet, wifi)', 'Tiket pendakian / simaksi', 'Tenda sesuai kapasitas', 'Asuransi pendakian', 'Nasi bungkus', 'Makan di camp area 2x', 'Snack', 'Welcome drink', 'Sarapan sebelum summit', 'P3K', 'Perkap makan', 'Perkap masak', 'Porter logistik + tenda', 'Tenda toilet', 'Guide (rasio 1:5)', 'Dokumentasi kamera', 'File foto edit'] },
+  executive:{ nama:'Executive', h:[2200, 1500, 1200, 1100, 1100, 1000, 950, 950, 950, 900],
+    fas:['Fasilitas basecamp (toilet, wifi)', 'Tiket pendakian / simaksi', 'Tenda (rasio 1:3)', 'Air mineral 600 ml (4 botol/orang)', 'Asuransi pendakian', 'Sarapan dan nasi bungkus', 'Makan di camp area 2x', 'Snack dan buah', 'Welcome drink + sop buah', 'Sarapan sebelum summit', 'Perkap masak dan makan', 'Kursi + meja', 'Fasilitas camp (sleeping bag + matras foam)', 'P3K', 'Porter logistik + tenda', 'Tenda toilet', 'Guide (rasio 1:5)', 'Dokumentasi kamera', 'File foto edit'] },
+  vip:{ nama:'VIP', h:[2800, 2000, 1800, 1600, 1500, 1500, 1500, 1500, 1400, 1400],
+    fas:['Fasilitas basecamp (toilet, wifi)', 'Tiket pendakian / simaksi', 'Tenda (rasio 1:3)', 'Air mineral 600 ml (4 botol/orang)', 'Asuransi pendakian', 'Makan sebelum dan sesudah pendakian', 'Makan selama pendakian 3x', 'Snack dan buah', 'Welcome drink + sop buah', 'Grill', 'Perkap masak dan makan', 'Kursi + meja', 'Fasilitas camp (sleeping bag + matras foam)', 'P3K', 'Porter pribadi (1:3, maks. 20 kg)', 'Porter logistik + tenda', 'Tenda toilet', 'Guide (rasio 1:5)', 'Dokumentasi kamera', 'File foto + video editing'] },
+  luxury:{ nama:'Luxury', h:[3400, 2500, 2300, 2200, 2000, 2000, 1900, 1900, 1900, 1900],
+    fas:['Fasilitas basecamp (toilet, wifi)', 'Tiket pendakian / simaksi', 'Tenda dome (rasio 1:2)', 'Air mineral 600 ml (8 botol/orang)', 'Asuransi pendakian', 'Makan sebelum dan sesudah pendakian', 'Makan selama pendakian 4x', 'Snack dan buah', 'Welcome drink + sop buah', 'Grill', 'Perkap masak dan makan', 'Kursi + meja', 'Tenda dapur makan', 'Fasilitas camp (sleeping pad, matras, sleeping bag, bantal)', 'P3K', 'Porter logistik + tenda', 'Tenda toilet', 'Porter pribadi', 'Guide (rasio 1:5)', 'Dokumentasi kamera', 'File foto + video editing'] }
+};
+PV.economy.ringkas = 'Paket dasar: tiket pendakian, tenda sesuai kapasitas, makan di camp area 2x, porter logistik + tenda, guide rasio 1:5, dan dokumentasi kamera.';
+PV.executive.ringkas = 'Beda utama dari Economy: tenda rasio 1:3, kursi dan meja, sleeping bag + matras foam, air mineral 4 botol per orang, serta snack dan buah.';
+PV.vip.ringkas = 'Beda utama dari Executive: porter pribadi (1:3, maks. 20 kg), grill, makan selama pendakian 3x, dan video editing.';
+PV.luxury.ringkas = 'Beda utama dari VIP: tenda dome rasio 1:2, tenda dapur makan, sleeping pad dan bantal, makan selama pendakian 4x, serta air mineral 8 botol per orang.';
+const MENU = [
+  ['Kuah', ['Opor ayam', 'Gulai ayam', 'Tongseng sapi', 'Soto ayam / sapi', 'Sup sayur + ayam goreng', 'Nasi rawon sapi', 'Sop iga / iga bakar (VIP/Luxury)', 'Grill (VIP/Luxury)']],
+  ['Kering', ['Nasi liwet + ayam sambal', 'Nasi kuning + ayam kecap', 'Pecel ayam + lalapan', 'Pecel lele + lalapan']],
+  ['Breakfast', ['Pisang crispy', 'Pudding', 'Pisang lumpia', 'Dimsum', 'Kentang goreng', 'Tempe mendoan', 'Tahu crispy', 'Telur gulung', 'Roti bakar', 'Goreng singkong']],
+  ['Coffee break', ['Teh manis hangat', 'Kopi hitam', 'Kopi Good Day', 'Susu / Energen', 'Hydro Coco', 'Coca-Cola', 'Pocari', 'Floridina']]
+];
+const GEAR = ['Carrier', 'Sepatu gunung dan sandal', 'Kaus kaki', 'Celana dan pakaian ganti', 'Jaket puffer / waterproof', 'Topi dan sarung tangan', 'Senter / headlamp', 'Sleeping bag', 'Matras', 'Obat pribadi', 'Gaiter (kondisional)', 'Rain coat / jas hujan', 'Tisu kering', 'Baterai cadangan', 'Trasbag / kantong sampah', 'Trekking pole', 'Cemilan dan air secukupnya', 'Masker / buff', 'Perlengkapan mandi'];
+const SAFETY = [['bx-group','Rasio leader dan peserta: 1 leader untuk maksimal 6 peserta, dengan sweeper di barisan belakang'],['bx-first-aid','Leader membawa P3K dan memiliki sertifikat pertolongan pertama gunung'],['bx-radio','SOP darurat berkoordinasi dengan pos basecamp dan SAR setempat'],['bx-shield-quarter','Asuransi kecelakaan untuk setiap peserta'],['bx-heart','Pengecekan kondisi fisik dan catatan kesehatan sebelum mulai mendaki']];
+const FAQS = [
+  ['Apakah trip ini cocok untuk pemula?','Tergantung gunung dan jalurnya. Pilih jalur yang sesuai pengalamanmu, dan tanya admin lewat WhatsApp kalau ragu. Syarat kesehatan yang sudah tercatat ada di halaman detail (misalnya Rinjani) dan di Syarat & Ketentuan. Untuk trip lain, tanyakan ke admin.','pemula'],
+  ['Apa bedanya Paket Hemat dan Paket Lengkap?','Paket Hemat: biaya transport dibagi (patungan) bersama peserta lain. Paket Lengkap: transport sudah termasuk dalam harga.','paket'],
+  ['Bagaimana cara memilih jadwal dan meeting point?','Buka halaman detail trip, pilih paket atau titik kumpul, lalu pilih tanggal. Tanggal dan harga yang tampil menyesuaikan pilihanmu. Di formulir pendaftaran, kamu memilih meeting point sebelum membayar.','jadwal'],
+  ['Apa saja yang termasuk dan belum termasuk di harga?','Rincian "Termasuk" dan "Tidak termasuk" ada di halaman detail trip. Untuk beberapa trip rincian belum dilengkapi, jadi tanyakan ke admin sebelum mendaftar. Contoh yang belum termasuk pada Raung dan Rinjani: perlengkapan pribadi, surat keterangan sehat, dan porter pribadi.','biaya'],
+  ['Perlengkapan apa yang harus dibawa?','Daftar perlengkapan pribadi wajib ada di halaman detail tiap trip. Tenda dan alat masak bergantung pada trip, jadi cek bagian "Termasuk" atau tanya admin.','gear'],
+  ['Berapa minimal peserta untuk berangkat?','Trip tektok minimal 7 peserta. Rinjani dari Jakarta minimal 18 orang, dan jika kursi tidak penuh ada penambahan biaya. Untuk trip lain, tanyakan ke admin.','min'],
+  ['Siapa yang boleh ikut?','Peserta wajib sehat jasmani. Untuk Rinjani, peserta tidak boleh memiliki riwayat asma, jantung, epilepsi, atau AMS. Batas usia minimum mengikuti ketentuan tiap trip, dan peserta di bawah umur wajib didampingi. Ketentuan usia masih menunggu konfirmasi final Karana.','siapa'],
+  ['Bagaimana ketentuan DP, pembatalan, dan refund?','DP 50% dibayar saat mendaftar. Jika peserta membatalkan, DP hangus 100%, kecuali peserta sakit (dengan surat sakit dan obat) atau ada musibah besar di keluarga. Jika trip dibatalkan oleh Karana, misalnya karena kuota kurang, pembayaran dikembalikan 100%. Ketentuan lengkap ada di Syarat & Ketentuan dan masih menunggu konfirmasi final Karana.','dp'],
+  ['Berapa harga private trip?','Harga per orang tergantung paket (Economy, Executive, VIP, Luxury) dan jumlah peserta 1–20 orang. Hitung estimasinya di tab Private trip; harga final dikonfirmasi admin. Belum termasuk transportasi dari meeting point ke basecamp dan tiket WNA.','private'],
+  ['Bagaimana kalau cuaca buruk?','Keputusan lanjut atau tunda mengikuti arahan pengelola taman nasional atau basecamp. Perubahan jadwal akibat force majeure diinformasikan lewat WhatsApp sesegera mungkin.','cuaca'],
+  ['Berapa lama slot saya ditahan?','Setelah data diri diisi, slot ditahan 2 jam. Kirim bukti transfer sebelum waktu habis agar slot tidak dilepas.' + (DEMO_MODE ? ' Di versi demo ini, penahanan slot hanya simulasi di halaman pendaftaran.' : ''),'slot'],
+  ['Bagaimana cara mengecek status pendaftaran atau menghubungi admin?','Gunakan menu Cek status booking dengan kode pendaftaran.' + (DEMO_MODE ? ' Di versi demo, kode hanya bisa dicek di perangkat tempat kamu mendaftar.' : '') + ' Untuk pertanyaan lain, hubungi admin lewat tombol WhatsApp.','status']
+];
+
+/* ================= HELPERS ================= */
+const $ = id => document.getElementById(id);
+const SM = () => matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+const rp = n => 'Rp' + n.toLocaleString('id-ID');
+const sisa = d => d.total - d.terisi - (d.ditahan || 0);
+const minHarga = t => Math.min(...t.titik.map(x => x.h));
+const dObj = s => new Date(s + 'T00:00:00');
+const monS = d => d.toLocaleDateString('id-ID', { month:'short' }).replace('.', '');
+const fmtDay = s => dObj(s).getDate();
+const fmtMon = s => monS(dObj(s));
+const endDate = d => { const b = dObj(d.tgl); b.setDate(b.getDate() + d.hari - 1); return b; };
+const iso = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+const fmtRange = d => {
+  const a = dObj(d.tgl), b = endDate(d);
+  if (d.hari <= 1) return `${a.getDate()} ${monS(a)} ${a.getFullYear()}`;
+  return a.getMonth() === b.getMonth() ? `${a.getDate()}–${b.getDate()} ${monS(a)} ${a.getFullYear()}` : `${a.getDate()} ${monS(a)} – ${b.getDate()} ${monS(b)} ${a.getFullYear()}`;
+};
+const fmtShort = d => fmtRange(d).replace(/ \d{4}$/, '');
+const fmtDays = d => { const a = dObj(d.tgl), b = endDate(d); return d.hari <= 1 ? `${a.getDate()}` : a.getMonth() === b.getMonth() ? `${a.getDate()}–${b.getDate()}` : `${a.getDate()} ${monS(a)}–${b.getDate()} ${monS(b)}`; };
+const today0 = () => { const d = new Date(); d.setHours(0, 0, 0, 0); return d; };
+const upcoming = d => dObj(d.tgl) > today0(); /* hanya keberangkatan setelah hari ini */
+const nextDep = t => t.jadwal.find(upcoming);
+const isSoon = t => !!t.soon || !t.jadwal.some(upcoming);
+const depsFor = (t, i = 0) => { const x = t.titik[i], m = x && x.mp; return t.jadwal.filter(d => upcoming(d) && (!d.mp || !m || d.mp === m)); };
+const fullName = t => `${t.gunung}${t.jalur ? ' ' + t.jalur : ''}${t.kat === 'camp' || t.kat === 'tektok' ? ' (' + KAT[t.kat] + ')' : ''}`;
+const depByKey = k => { for (const t of TRIPS) for (const d of t.jadwal) if (d.key === k) return d; };
+const validWa = v => /^(\+?62|0)8\d{7,12}$/.test(String(v).replace(/[\s-]/g, ''));
+const waLink = msg => `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+const tripById = id => TRIPS.find(t => t.id === id);
+/* Titik dengan durasi berbeda dari rentang tanggal jadwal (Rinjani: Bandara Lombok 6 hari vs rute Jakarta 10 hari). Tanggal kumpul titik itu NEEDS_CONFIRMATION. */
+const durMis = (x, d) => !!(x && x.durasi && d && parseInt(x.durasi, 10) !== d.hari);
+const dateLbl = (x, d) => d ? fmtRange(d) + (durMis(x, d) ? ' (rute ' + d.hari + ' hari)' : '') : '';
+const depNote = (x, d) => durMis(x, d) ? `Tanggal ${fmtRange(d)} adalah keberangkatan rute ${d.hari} hari. Titik ini berdurasi ${x.durasi}, jadi tanggal kumpulnya perlu dikonfirmasi admin Karana. Tanyakan lewat WhatsApp.` : '';
+function toast(msg) { const t = $('toast'); t.textContent = msg; t.classList.add('on'); clearTimeout(toast.h); toast.h = setTimeout(() => t.classList.remove('on'), Math.min(9000, Math.max(2800, msg.length * 65))); }
+function copyText(s, okMsg, failMsg) { (navigator.clipboard ? navigator.clipboard.writeText(s) : Promise.reject()).then(() => toast(okMsg || 'Disalin'), () => toast(failMsg || ('Salin manual: ' + s))); }
+function markField(id, good) {
+  const f = $(id).closest('.field'); f.classList.toggle('bad', !good);
+  const inp = f.querySelector('input,select,textarea'), err = f.querySelector('.err');
+  if (inp) { inp.setAttribute('aria-invalid', good ? 'false' : 'true'); if (!good && err) { if (!err.id) err.id = 'err-' + (inp.id || id); inp.setAttribute('aria-describedby', err.id); } else inp.removeAttribute('aria-describedby'); }
+  return good;
+}
+/* escape untuk teks yang disisipkan lewat innerHTML (data localStorage bisa diubah/rusak) */
+const esc = v => String(v == null ? '' : v).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
+  arr(k) { const v = this.get(k, []); return Array.isArray(v) ? v.filter(x => x && typeof x === 'object') : []; } /* data rusak/bukan array tidak boleh membuat halaman error */
+};
+
+/* Analytics: BELUM ada tracking terpasang (TODO-ANALYTICS). track() hanya mendorong event ke window.dataLayer bila sudah ada (mis. GTM), selain itu tidak melakukan apa pun.
+   Event yang sudah dipanggil: view_detail, filter_trip, begin_booking, form_completion, payment_proof_submission (simulasi), whatsapp_click.
+   Event yang menunggu backend atau pemasangan: cta_click (per tombol), confirmed_booking (setelah verifikasi sungguhan). UTM dibaca dari query string dan ikut di setiap event. */
+const UTM = (() => { try { const p = new URLSearchParams(location.search), o = {}; ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(k => { if (p.get(k)) o[k] = p.get(k); }); return o; } catch (e) { return {}; } })();
+function track(name, params) { try { if (window.dataLayer) window.dataLayer.push(Object.assign({ event:name }, UTM, params || {})); } catch (e) {} }
+
+/* ================= STATE ================= */
+const S = { trip:TRIPS[0], titik:0, dep:0, qty:1, bayar:'dp', filter:'all', hold:null, names:[], bookings:store.arr('karana_bookings'), leads:store.arr('karana_leads'), route:'home', pendingJump:null, lastTrip:null, file:null, pv:{ paket:'economy', pax:5 } };
+const curDeps = () => depsFor(S.trip, S.titik);
+const curDep = () => { const ds = curDeps(); return ds[S.dep] || ds[0]; };
+const DEMO_BOOKING = { kode:'KRN-DEMO', tripId:'gede', gunung:'Gunung Gede via Putri (Camp)', tgl:'23–25 Nov 2026', titik:'Paket Lengkap', qty:2, nama:'Contoh Peserta', status:'terkonfirmasi', bayar:'DP 50%', jumlah:650000 };
+const HOLD_MS = 2 * 60 * 60 * 1000;
+
+/* ================= SEO ================= */
+/* SPA hash-route: crawler hanya melihat satu URL (fragmen # tidak dikirim ke server), jadi canonical tetap ke beranda. og:url memakai link yang dibagikan.
+   TODO-BACKEND/SSR: pratinjau sosial dan indeks per trip butuh halaman tersendiri (prerender atau server). */
+const robotsFor = name => (!SEO_LIVE || name === 'booking' || name === 'status') ? 'noindex,follow' : 'index,follow';
+function setMeta(id, v) { const el = $(id); if (el) el.setAttribute(el.tagName === 'LINK' ? 'href' : 'content', v); }
+function setSeo({ title, desc, img, path, ld, name }) {
+  document.title = title; setMeta('m-desc', desc); setMeta('og-title', title); setMeta('og-desc', desc); setMeta('tw-title', title); setMeta('tw-desc', desc);
+  setMeta('og-img', img); setMeta('tw-img', img); setMeta('og-url', BASE + path); setMeta('canon', BASE + '/');
+  document.querySelector('meta[name=robots]').setAttribute('content', robotsFor(name));
+  $('ld').textContent = JSON.stringify(ld);
+}
+const orgLd = { '@type':'TravelAgency', name:'Karana Adventure', url:BASE + '/', sameAs:[SOSMED.instagram, SOSMED.tiktok].filter(Boolean), description:'Open trip, private trip, dan family gathering pendakian gunung.', telephone:'+' + WA /* TODO-KARANA: nomor sementara */ };
+function seoFor(name) {
+  const defImg = u(P.f, 1200), ctx = { '@context':'https://schema.org' }; /* TODO-OG: gambar masih foto contoh */
+  let m;
+  if (name === 'detail') {
+    const t = S.trip, nm = fullName(t), d = nextDep(t), soon = isSoon(t), prices = t.titik.map(x => x.h), lo = Math.min(...prices), hi = Math.max(...prices), n = t.jadwal.filter(upcoming).length;
+    const org = { '@type':'Organization', name:'Karana Adventure', url:BASE + '/' };
+    /* Harga berbeda per paket/meeting point, jadi AggregateOffer. Tanpa validFrom statis dan tanpa availability karena kuota masih simulasi. */
+    const offers = { '@type':'AggregateOffer', lowPrice:String(lo), highPrice:String(hi), priceCurrency:'IDR', offerCount:String(t.titik.length), url:BASE + '/#/trip/' + t.id };
+    const ld = soon
+      ? { ...ctx, '@type':'TouristTrip', name:`Open Trip ${nm}`, description:`Open trip ${nm} dari Karana Adventure. Jadwal belum dibuka.`, image:[u(t.hero, 1200)], provider:org, offers }
+      : { ...ctx, '@type':'Event', name:`Open Trip ${nm}`, startDate:d.tgl, endDate:iso(endDate(d)), eventStatus:'https://schema.org/EventScheduled', eventAttendanceMode:'https://schema.org/OfflineEventAttendanceMode', image:[u(t.hero, 1200)], description:`Pendakian ${nm}, ${durText(t, d)}.`, location:{ '@type':'Place', name:t.gunung, address:t.gunung }, organizer:org, offers };
+    m = { title:`Open Trip ${nm} | ${soon ? 'Jadwal belum dibuka' : fmtRange(d)} | Karana Adventure`,
+      desc: soon ? `Jadwal open trip ${nm} belum dibuka. Lihat harga per meeting point dari poster Karana dan tanya admin lewat WhatsApp.` : `Open trip ${nm}: keberangkatan terdekat ${fmtRange(d)}, ${n} jadwal, harga mulai ${rp(lo)} per orang. Lihat fasilitas, meeting point, dan cara daftar.`,
+      img:u(t.hero, 1200), path:'/#/trip/' + t.id, ld };
+  } else if (name === 'booking') {
+    m = { title:`Daftar Open Trip ${fullName(S.trip)} | Karana Adventure`, desc:`Formulir pendaftaran open trip ${fullName(S.trip)}.`, img:u(S.trip.hero, 1200), path:'/#/daftar/' + S.trip.id, ld:{ ...ctx, ...orgLd } };
+  } else if (name === 'status') {
+    m = { title:'Cek Status Booking | Karana Adventure', desc:'Cek status pendaftaran open trip dengan kode pendaftaran.', img:defImg, path:'/#/status', ld:{ ...ctx, ...orgLd } };
+  } else if (name === 'syarat') {
+    m = { title:'Syarat & Ketentuan | Karana Adventure', desc:'Syarat dan ketentuan pendaftaran, pembayaran DP, dan pembatalan open trip Karana Adventure.', img:defImg, path:'/#/syarat', ld:{ ...ctx, ...orgLd } };
+  } else {
+    m = { title:'Open Trip & Private Trip Gunung | Karana Adventure', desc:'Open trip dan private trip pendakian gunung bersama Karana Adventure: camp, tektok, Raung, dan Rinjani. Lihat jadwal, harga per orang, dan cara daftar.', img:defImg, path:'/',
+      ld:{ ...ctx, '@graph':[ orgLd, { '@type':'FAQPage', mainEntity:FAQS.map(([q, a]) => ({ '@type':'Question', name:q, acceptedAnswer:{ '@type':'Answer', text:a } })) } ] } };
+  }
+  setSeo({ ...m, name });
+}
+
+/* ================= ROUTER (hash, bisa dishare & tombol back berfungsi) ================= */
+function parseHash() { const raw = location.hash.replace(/^#\/?/, ''); const [path, query] = raw.split('?'); return { seg:path.split('/').filter(Boolean), q:new URLSearchParams(query || '') }; }
+function navigate(path) { location.hash = '#/' + path; }
+function focusTrip(t) { S.trip = t; if (S.lastTrip !== t.id) { S.titik = 0; S.dep = 0; S.lastTrip = t.id; } }
+function render() {
+  while (OV.length) { const o = OV.pop(); o.closer(); } document.body.classList.remove('noscroll');
+  const { seg, q } = parseHash(); const page = seg[0] || 'home'; let name = 'home';
+  const t = tripById(seg[1]);
+  if (page === 'trip' && t) { focusTrip(t); name = 'detail'; }
+  else if (page === 'daftar' && t && isSoon(t)) { focusTrip(t); name = 'detail'; history.replaceState(null, '', '#/trip/' + t.id); }
+  else if (page === 'daftar' && t) { focusTrip(t); name = 'booking'; }
+  else if (page === 'status') name = 'status';
+  else if (page === 'syarat') name = 'syarat';
+  else if (page !== 'home') { toast('Halaman tidak ditemukan, kembali ke beranda'); history.replaceState(null, '', '#/'); }
+  const DEPTH = { home:0, detail:1, booking:2, status:2, syarat:2 }, prev = S.route;
+  if (prev === 'home') S.homeY = window.scrollY;
+  const dir = !prev || prev === name ? '' : DEPTH[name] > DEPTH[prev] ? 'fwd' : DEPTH[name] < DEPTH[prev] ? 'bck' : '';
+  S.route = name;
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('on', 'fwd', 'bck'));
+  void $('p-' + name).offsetWidth;
+  $('p-' + name).classList.add('on'); if (dir) $('p-' + name).classList.add(dir);
+  if (name === 'detail') renderDetail();
+  if (name === 'booking') prepareBooking();
+  if (name === 'status') initStatus(q.get('kode'));
+  $('backBtn').classList.toggle('hidden', name === 'home'); $('backBtn').classList.toggle('grid', name !== 'home');
+  $('footer').classList.toggle('pb-28', name === 'detail');
+  seoFor(name); updateWa(name);
+  if (S.pendingJump) { const id = S.pendingJump; S.pendingJump = null; setTimeout(() => $(id).scrollIntoView({ behavior:SM() }), 40); }
+  else if (name === 'home' && dir === 'bck' && S.homeY) window.scrollTo(0, S.homeY);
+  else window.scrollTo(0, 0);
+  const h = document.querySelector('#p-' + name + ' h1'); if (h && S.booted) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll:true }); }
+}
+function goBack() { if (history.length > 1 && S.booted) history.back(); else navigate(''); }
+function jump(id) { if (S.route !== 'home') { S.pendingJump = id; navigate(''); } else $(id).scrollIntoView({ behavior:SM() }); }
+function skipToMain() { const m = document.querySelector('.page.on h1') || $('main'); m.setAttribute('tabindex', '-1'); m.focus(); }
+function openTrip(id) { navigate('trip/' + id); }
+function startBooking() { navigate('daftar/' + S.trip.id); }
+function updateWa(name) {
+  const t = S.trip, d = curDep(), x = t.titik[S.titik], when = d ? ' ' + fmtRange(d) : '', pkt = x ? ', pilihan ' + x.n : '';
+  let msg = 'Halo Karana Adventure, saya mau tanya soal jadwal open trip dan private trip.';
+  if (name === 'detail') msg = `Halo Karana Adventure, saya mau tanya soal open trip ${fullName(t)}${when}${pkt}.`;
+  if (name === 'booking') msg = `Halo Karana Adventure, saya sedang mendaftar ${fullName(t)}${when}${pkt} dan butuh bantuan.`;
+  if (name === 'status') msg = S.lastKode ? `${demoTag}Halo Karana Adventure, saya mau tanya soal status pendaftaran dengan kode ${S.lastKode}.` : 'Halo Karana Adventure, saya mau tanya soal status pendaftaran trip.';
+  if (name === 'syarat') msg = 'Halo Karana Adventure, saya mau tanya soal syarat dan ketentuan pendaftaran.';
+  const link = waLink(msg);
+  $('waFloat').href = link; $('footWa').href = link; $('menuWa').href = link;
+  document.querySelectorAll('.js-wa').forEach(a => { a.href = link; });
+  $('waFloat').classList.toggle('up', name === 'detail'); $('waFloat').classList.toggle('hide-m', name === 'detail'); waShow();
+}
+function waShow() { const th = S.route === 'detail' ? 320 : Math.round(innerHeight * .7); $('waFloat').classList.toggle('show', scrollY > th); }
+addEventListener('scroll', () => { if (!S.waTick) { S.waTick = true; requestAnimationFrame(() => { S.waTick = false; waShow(); }); } }, { passive:true });
+function syncThemeUI() {
+  const light = document.documentElement.classList.contains('light');
+  $('themeIc').className = 'bx ' + (light ? 'bx-moon' : 'bx-sun') + ' text-xl';
+  document.querySelector('meta[name=theme-color]').setAttribute('content', light ? '#F6F6F3' : '#181D1A');
+}
+function toggleTheme() {
+  const light = document.documentElement.classList.toggle('light');
+  $('themeIc').className = 'bx ' + (light ? 'bx-moon' : 'bx-sun') + ' text-xl';
+  document.querySelector('meta[name=theme-color]').setAttribute('content', light ? '#F6F6F3' : '#181D1A');
+  store.set('karana_theme', light ? 'light' : 'dark');
+}
+
+
+/* ================= OVERLAY (tombol back HP menutup overlay, bukan keluar halaman) ================= */
+const OV = [];
+const OVEL = { menu:'menu', interest:'interest', lb:'lb', pick:'pick' };
+function ovOpen(name, closer) {
+  OV.push({ name, closer, from:document.activeElement }); history.pushState({ ov:OV.length }, '');
+  document.body.classList.add('noscroll');
+  setTimeout(() => { const el = $(OVEL[name]); if (el && !el.contains(document.activeElement)) { const f = el.querySelector('input,button,a[href]'); if (f) f.focus(); } }, 90);
+}
+function trapTab(e) {
+  const el = $(OVEL[OV[OV.length - 1].name]); if (!el) return;
+  const f = [...el.querySelectorAll('button:not([disabled]),input,select,textarea,a[href]')].filter(x => x.offsetParent !== null);
+  if (!f.length) return; const first = f[0], last = f[f.length - 1], a = document.activeElement;
+  if (!el.contains(a)) { e.preventDefault(); first.focus(); }
+  else if (e.shiftKey && a === first) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && a === last) { e.preventDefault(); first.focus(); }
+}
+function ovBack() { if (OV.length) history.back(); }
+function ovSilentClose() { const o = OV.pop(); if (o) { o.closer(); if (o.from && o.from.focus && document.contains(o.from)) o.from.focus({ preventScroll:true }); } if (!OV.length) document.body.classList.remove('noscroll'); }
+window.addEventListener('popstate', () => { const depth = (history.state && history.state.ov) || 0; while (OV.length > depth) ovSilentClose(); });
+function ovThen(fn) { if (OV.length) { ovBack(); setTimeout(fn, 80); } else fn(); }
+function openMenu() { $('menu').classList.remove('hidden'); ovOpen('menu', () => $('menu').classList.add('hidden')); }
+function menuGo(fn) { ovThen(fn); }
+
+/* ================= TESTIMONI (jalan sendiri, berhenti saat disentuh) ================= */
+const TESTI = [
+  { q:'Pertama kali ikut open trip dan nyaman banget. Leader-nya sabar nunggu yang jalannya pelan.', n:'Dinda A.', t:'Gunung Prau', f:'photo-1544005313-94ddf0286df2' },
+  { q:'Bawa keluarga termasuk anak SMP, aman terkendali. Meeting point fleksibel, jemputan tepat waktu.', n:'Farhan R.', t:'Family gathering, Gede', f:'photo-1633332755192-727a05c4013d' },
+  { q:'Info trip jelas dari awal, tidak ada biaya siluman. Cocok buat yang baru mau coba naik gunung.', n:'Bagas W.', t:'Gunung Merbabu', f:'photo-1517841905240-472988babdf9' }
+];
+let testiI = 0;
+function initTesti() {
+  $('testiTrack').innerHTML = TESTI.map((x, i) => `<figure class="flex w-[82%] shrink-0 snap-start flex-col justify-between gap-4 border border-line bg-bg p-4 sm:w-[340px] lg:w-auto" aria-roledescription="slide" aria-label="Testimoni contoh ${i + 1} dari ${TESTI.length}">
+    <div><span class="pend !ml-0">Contoh (dummy)</span>
+    <blockquote class="mt-2 text-[.95rem] leading-relaxed">“${x.q}”</blockquote></div>
+    <figcaption class="flex items-center gap-3"><img class="h-10 w-10 shrink-0 rounded-full object-cover" width="40" height="40" loading="lazy" ${loc('img/testi-' + (i + 1) + '.jpg', u(x.f, 120))} data-alt="avatar testimoni contoh" alt="Foto ${x.n}"><div class="min-w-0 text-sm"><b class="block">${x.n}</b><span class="block truncate text-mute">${x.t}</span>${x.ig ? `<a href="${x.ig}" target="_blank" rel="noopener" class="inline-flex min-h-[44px] items-center gap-1 font-semibold text-ember"><i class="bx bxl-instagram" aria-hidden="true"></i>${x.igNama || 'Instagram'}</a>` : ''}</div></figcaption></figure>`).join('');
+  $('testiDots').innerHTML = TESTI.map((_, i) => `<button onclick="testiGo(${i})" class="grid h-11 w-11 place-items-center" aria-label="Testimoni ${i + 1}"><span class="block h-2 rounded-full transition-all"></span></button>`).join('');
+  const tr = $('testiTrack'); let st;
+  tr.addEventListener('scroll', () => { clearTimeout(st); st = setTimeout(() => { const c = tr.children[1] ? tr.children[1].offsetLeft - tr.children[0].offsetLeft : tr.clientWidth; testiI = Math.min(TESTI.length - 1, Math.round(tr.scrollLeft / c)); testiDots(); }, 80); }, { passive:true });
+  testiDots();
+}
+function testiGo(i) { testiI = i; const tr = $('testiTrack'); tr.scrollTo({ left:tr.children[i].offsetLeft - tr.children[0].offsetLeft, behavior:SM() }); testiDots(); }
+function testiDots() { [...$('testiDots').children].forEach((d, i) => { const s = d.firstElementChild; s.style.width = i === testiI ? '22px' : '8px'; s.style.background = i === testiI ? 'rgb(var(--ember))' : 'rgb(var(--line))'; d.setAttribute('aria-current', i === testiI ? 'true' : 'false'); }); }
+
+/* ================= HOME ================= */
+function openTab(t) {
+  const open = t === 'open';
+  $('panel-open').classList.toggle('hidden', !open); $('panel-private').classList.toggle('hidden', open);
+  [['open', open], ['private', !open]].forEach(([k, on]) => {
+    const b = $('tab-' + k); b.setAttribute('aria-selected', on); b.tabIndex = on ? 0 : -1;
+    b.className = 'rounded-full px-5 py-2.5 text-sm font-semibold ' + (on ? 'bg-ember text-[rgb(var(--on-ember))] shadow' : 'text-mute hover:text-fg');
+  });
+}
+function renderChips() {
+  const items = [['all', 'Semua', TRIPS.length], ...Object.entries(KAT).map(([k, l]) => [k, l, TRIPS.filter(t => t.kat === k).length])];
+  $('chips').innerHTML = items.map(([id, label, n]) => `<button onclick="setFilter('${id}')" aria-pressed="${S.filter === id}" class="shrink-0 rounded-full border min-h-[44px] px-4 py-2.5 text-sm font-semibold ${S.filter === id ? 'border-ember bg-ember/10 text-ember' : 'border-line bg-surface text-mute hover:text-fg'}">${label} <span class="text-xs opacity-70">${n}</span></button>`).join('');
+}
+function heroSearch(e) { e.preventDefault(); const v = S.hs; if (!v || v === 'all') { openTab('open'); jump('jadwal'); } else navigate('trip/' + v); }
+function initHeroSearch() { S.hs = 'all'; }
+function pickRow(id, title, sub, right, on) {
+  return `<button type="button" aria-pressed="${on}" onclick="pickHs('${id}')" class="flex min-h-[56px] w-full items-center gap-3 rounded-2xl px-3 py-2.5 text-left hover:bg-raise ${on ? 'bg-raise' : ''}"><span class="min-w-0 flex-1"><span class="block truncate font-semibold">${title}</span>${sub ? `<span class="block truncate text-xs text-mute">${sub}</span>` : ''}</span>${right}<i class="bx ${on ? 'bx-check-circle text-ember' : 'bx-circle text-mute'} shrink-0 text-2xl" aria-hidden="true"></i></button>`;
+}
+function renderPick() {
+  const q = ($('pickQ').value || '').trim().toLowerCase(); let h = '';
+  if (!q || 'semua gunung'.includes(q)) h += pickRow('all', 'Semua gunung', TRIPS.length + ' pilihan trip', '', S.hs === 'all');
+  Object.entries(KAT).forEach(([k, l]) => {
+    const rows = TRIPS.filter(t => t.kat === k && (!q || (fullName(t) + ' ' + l).toLowerCase().includes(q)));
+    if (!rows.length) return;
+    h += `<p class="px-3 pb-1 pt-4 text-[.7rem] font-semibold uppercase tracking-widest text-ember">${l}</p>` + rows.map(t => {
+      const soon = isSoon(t);
+      return pickRow(t.id, t.gunung, [t.jalur, soon ? 'Jadwal belum dibuka' : 'Mulai ' + rp(minHarga(t))].filter(Boolean).join(' · '), soon ? '<span class="soon-badge shrink-0">Belum dibuka</span>' : '', S.hs === t.id);
+    }).join('');
+  });
+  $('pickList').innerHTML = h || '<p class="px-3 py-8 text-center text-mute">Tidak ada gunung yang cocok. Coba kata kunci lain.</p>';
+  const nPick = $('pickList').querySelectorAll('button').length; $('pickCount').textContent = nPick ? nPick + ' pilihan' : 'Tidak ada gunung yang cocok';
+}
+function openPick() { $('pickQ').value = ''; renderPick(); $('pick').classList.add('on'); ovOpen('pick', () => $('pick').classList.remove('on')); }
+function closePick() { if (OV.length && OV[OV.length - 1].name === 'pick') ovBack(); else $('pick').classList.remove('on'); }
+function pickHs(id) { S.hs = id; const t = tripById(id); $('hsLabel').textContent = t ? fullName(t) : 'Semua gunung'; closePick(); }
+function setFilter(f) { S.filter = f; renderChips(); renderList(); track('filter_trip', { filter:f }); }
+function slotBadge(d) {
+  if (!d) return `<span class="inline-flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#1F5A38]"><i class="bx bx-time-five" aria-hidden="true"></i>Jadwal belum dibuka</span>`;
+  return `<span class="inline-flex rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#1F5A38]">Jadwal tersedia</span>`;
+}
+function durText(t, d) {
+  const ns = t.titik.map(x => parseInt(x.durasi, 10)).filter(Boolean);
+  if (ns.length) { const a = Math.min(...ns), b = Math.max(...ns); return a === b ? a + ' hari' : a + '–' + b + ' hari'; }
+  return d ? (d.hari <= 1 ? '1 hari' : d.hari + ' hari') : 'Belum tersedia';
+}
+const showWk = (t, d) => !!d && d.wk && (t.kat === 'camp' || t.kat === 'tektok');
+function cardHtml(t, wide) {
+  const soon = isSoon(t), d = soon ? null : nextDep(t), n = soon ? 0 : t.jadwal.filter(upcoming).length, nm = fullName(t);
+  const sub = [(t.kat === 'camp' || t.kat === 'tektok') ? KAT[t.kat] : '', t.jalur, t.mdpl ? t.mdpl.toLocaleString('id-ID') + ' mdpl' : ''].filter(Boolean).join(' · ') || KAT[t.kat];
+  const info = t.inc ? 'Rincian termasuk dan tidak termasuk tersedia' : 'Rincian fasilitas belum tersedia';
+  const cta = `<a href="#/trip/${t.id}" class="btn ${soon ? 'btn-line' : 'btn-ember'} !min-h-[44px] !px-4" aria-label="Lihat detail trip ${nm}">Lihat Detail Trip<i class="bx bx-right-arrow-alt text-lg" aria-hidden="true"></i></a>`;
+  return `<article class="trip-card group relative flex ${wide ? 'w-full' : 'w-[78%] shrink-0 snap-start sm:w-[330px] md:w-auto'} flex-col overflow-hidden bg-surface p-2.5">
+      <a data-ph href="#/trip/${t.id}" class="relative block aspect-[16/9] overflow-hidden rounded-[18px] md:aspect-[4/3]" aria-label="Lihat detail trip ${nm}" tabindex="-1">
+        <img ${loc('img/trip-' + t.id + '.jpg', u(t.hero, 700))} data-alt="${t.gunung}" width="700" height="525" loading="lazy" decoding="async" alt="Foto ${t.gunung}" class="h-full w-full object-cover transition duration-500 group-hover:scale-105 ${soon ? 'grayscale-[.6]' : ''}">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute left-3 top-3">${slotBadge(d)}</div>
+        <span class="kat-pill absolute right-3 top-3">${KAT[t.kat]}</span>
+        <span class="sample-tag hidden">Foto contoh</span>
+        <div class="absolute bottom-3 left-3 text-white">${d ? `<p class="font-display text-3xl leading-none">${fmtDay(d.tgl)} <span class="text-lg">${fmtMon(d.tgl)}</span></p><p class="text-xs text-white/80">keberangkatan terdekat</p>` : `<p class="font-display text-2xl leading-none">Jadwal belum dibuka</p>`}</div>
+      </a>
+      <div class="flex flex-1 flex-col px-2 pb-1 pt-4">
+        <h3 class="font-display text-2xl"><a href="#/trip/${t.id}" class="after:absolute after:inset-0">${t.gunung}<span class="sr-only"> ${KAT[t.kat]}${t.jalur ? ', ' + t.jalur : ''}</span></a></h3>
+        <p class="mt-1 text-sm text-mute">${sub}</p>
+        <p class="mt-1 text-sm text-mute">${d ? `Terdekat ${fmtShort(d)} · ${durText(t, d)} · ${n} jadwal` : 'Jadwal belum dibuka. Harga di bawah dari poster Karana.'}</p>
+        <p class="mt-1 flex items-start gap-1.5 text-xs text-mute"><i class="bx ${t.inc ? 'bx-check-circle text-brand' : 'bx-info-circle'} mt-0.5 text-base" aria-hidden="true"></i>${info}</p>
+        <div class="relative z-10 mt-3 flex flex-wrap items-end justify-between gap-2">
+          <div><p class="text-xs text-mute">${soon ? 'Harga dari poster' : 'Mulai dari'}</p><p class="font-display text-2xl leading-none">${rp(minHarga(t))}</p><p class="text-xs text-mute">per orang</p></div>
+          ${cta}
+        </div>
+        <button onclick="openInterest('${t.id}', false)" class="relative z-10 mt-1 inline-flex min-h-[44px] items-center gap-2 self-start text-sm font-semibold text-mute hover:text-fg"><i class="bx bx-bell text-lg" aria-hidden="true"></i>${soon ? 'Kabari saya saat jadwal dibuka' : 'Kabari saya jika ada jadwal baru'}</button>
+      </div>
+    </article>`;
+}
+function showAllTrips() { S.showAll = true; renderList(); const c = $('tripList').children[6]; if (c) setTimeout(() => c.scrollIntoView({ behavior:SM(), block:'start' }), 30); }
+function renderList() {
+  const list = TRIPS.filter(t => S.filter === 'all' || t.kat === S.filter);
+  const LIM = 6, cut = S.filter === 'all' && !S.showAll && list.length > LIM, shown = cut ? list.slice(0, LIM) : list;
+  const rail = S.filter === 'all' && !S.showAll;
+  $('tripList').className = rail ? 'rail -mx-5 flex gap-4 overflow-x-auto px-5 pb-3 md:mx-0 md:grid md:grid-cols-2 md:gap-5 md:overflow-visible md:px-0 lg:grid-cols-3' : 'grid gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3';
+  $('tripList').innerHTML = shown.map(t => cardHtml(t, !rail)).join('') || `<p class="py-10 text-mute">Belum ada trip di kategori ini. Pilih kategori lain atau <a class="font-semibold text-ember underline" target="_blank" rel="noopener" href="${waLink('Halo Karana Adventure, saya mencari jadwal open trip yang belum ada di situs.')}">tanya admin via WhatsApp</a>.</p>`;
+  $('moreWrap').innerHTML = cut ? `<button type="button" onclick="showAllTrips()" class="btn btn-line w-full sm:w-auto">Lihat semua ${list.length} gunung <i class="bx bx-down-arrow-alt text-lg" aria-hidden="true"></i></button>` : (S.filter === 'all' && S.showAll ? `<button type="button" onclick="S.showAll=false; renderList(); jump('jadwal')" class="btn btn-line w-full sm:w-auto">Tampilkan lebih sedikit</button>` : '');
+  if (rail) $('tripList').scrollTo({ left:0 });
+}
+function renderFaq() {
+  $('faqList').innerHTML = FAQS.map(([q, a], i) => `<div class="faq border-t border-line"><h3><button id="faq-b-${i}" class="flex min-h-[44px] w-full items-center justify-between gap-4 py-5 text-left" aria-expanded="false" aria-controls="faq-a-${i}" onclick="toggleFaq(this)"><span class="text-lg font-semibold">${q}</span><i class="bx bx-plus faq-ic text-2xl" aria-hidden="true"></i></button></h3><div class="faq-a" id="faq-a-${i}" role="region" aria-labelledby="faq-b-${i}"><div><p class="pb-5 pr-8 text-mute">${a}</p></div></div></div>`).join('');
+  const items = $('faqList').children;
+  if (items.length > 5) { for (let i = 5; i < items.length; i++) items[i].classList.add('hidden'); $('faqList').insertAdjacentHTML('afterend', `<button id="faqMoreBtn" type="button" onclick="faqMore()" class="btn btn-line mt-5">Lihat semua ${items.length} pertanyaan</button>`); }
+}
+function faqMore() { document.querySelectorAll('#faqList .faq.hidden').forEach(x => x.classList.remove('hidden')); const b = $('faqMoreBtn'); if (b) b.remove(); }
+function toggleFaq(btn) {
+  const item = btn.closest('.faq'), was = item.classList.contains('open');
+  document.querySelectorAll('.faq.open').forEach(x => { x.classList.remove('open'); x.querySelector('button').setAttribute('aria-expanded', 'false'); });
+  if (!was) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+}
+/* ================= PRIVATE TRIP (kalkulator harga per paket dan jumlah peserta) ================= */
+const priceFor = (k, n) => PV[k].h[Math.min(Math.max(n, 1), 10) - 1] * 1000;
+function renderPv(skipInput) {
+  const p = S.pv, per = priceFor(p.paket, p.pax), total = per * p.pax;
+  $('pvPaket').innerHTML = Object.entries(PV).map(([id, x]) => `<button type="button" class="tile p-3.5" aria-pressed="${id === p.paket}" onclick="pvSet('${id}')"><p class="font-display text-lg font-bold leading-none">${x.nama}</p><p class="mt-1 text-xs text-mute">10–20 orang: ${rp(x.h[9] * 1000)}/orang</p></button>`).join('');
+  $('pvQty').textContent = p.pax; $('pvDiff').textContent = PV[p.paket].ringkas;
+  $('pvPer').textContent = rp(per); $('pvTotal').textContent = rp(total); $('pvDp').textContent = rp(Math.round(total * .5));
+  $('pvFasTitle').textContent = 'Fasilitas paket ' + PV[p.paket].nama;
+  $('pvFas').innerHTML = PV[p.paket].fas.map(x => `<li class="flex gap-2 border-t border-line py-2 text-sm"><i class="bx bx-check text-xl text-brand" aria-hidden="true"></i>${x}</li>`).join('');
+  $('pPaket').value = p.paket; if (!skipInput) { $('pJumlah').value = p.pax; markField('pJumlah', true); }
+}
+function pvSet(id) { S.pv.paket = id; renderPv(); }
+function pvStep(d) { S.pv.pax = Math.min(20, Math.max(1, S.pv.pax + d)); renderPv(); }
+function renderPvTable() {
+  const rows = [...Array(10)].map((_, i) => `<tr class="border-t border-line"><th scope="row" class="py-2 pr-3 text-left font-semibold">${i === 9 ? '10–20' : i + 1} orang</th>${Object.keys(PV).map(k => `<td class="py-2 pr-3 tabular-nums">${PV[k].h[i].toLocaleString('id-ID')}.000</td>`).join('')}</tr>`).join('');
+  $('pvTable').innerHTML = `<table class="w-full text-sm"><caption class="sr-only">Harga per orang menurut paket dan jumlah peserta, dalam rupiah</caption><thead><tr class="text-left text-xs uppercase tracking-wider text-mute"><th class="pb-2 pr-3 font-semibold">Peserta</th>${Object.values(PV).map(x => `<th class="pb-2 pr-3 font-semibold">${x.nama}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table>`;
+}
+function renderMenu() {
+  $('pvMenu').innerHTML = MENU.map(([k, items]) => `<div><p class="label !mb-1">${k}</p><ul class="space-y-1 text-sm">${items.map(x => `<li>${x}</li>`).join('')}</ul></div>`).join('');
+}
+function initPrivate() {
+  const names = [...new Set(TRIPS.filter(t => t.kat === 'camp' || t.kat === 'tektok').map(t => t.gunung))];
+  $('pGunung').innerHTML = names.map(n => `<option>${n}</option>`).join('') + '<option>Gunung lain (request)</option><option>Belum tahu, minta saran</option>';
+  $('pPaket').innerHTML = Object.entries(PV).map(([id, x]) => `<option value="${id}">${x.nama}</option>`).join('');
+  renderPv(); renderPvTable(); renderMenu();
+  $('pPaket').addEventListener('change', () => pvSet($('pPaket').value));
+  $('pTgl').min = iso(today0());
+  $('pJumlah').addEventListener('input', () => { const raw = $('pJumlah').value, n = +raw, good = raw !== '' && Number.isInteger(n) && n >= 1 && n <= 20; markField('pJumlah', good); if (good) { S.pv.pax = n; renderPv(true); } });
+  $('privForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const n = +$('pJumlah').value;
+    const ok = [markField('pNama', $('pNama').value.trim().length > 1), markField('pWa', validWa($('pWa').value)), markField('pJumlah', Number.isInteger(n) && n >= 1 && n <= 20), markField('pTgl', !$('pTgl').value || $('pTgl').value >= iso(today0()))].every(Boolean);
+    if (!ok) { document.querySelector('#privForm .field.bad .input').focus(); return; }
+    const k = $('pPaket').value, per = priceFor(k, n), meet = $('pMeet').value.trim(), cat = $('pCatatan').value.trim();
+    const msg = `Halo Karana Adventure, saya ${$('pNama').value.trim()} mau konsultasi private trip paket ${PV[k].nama} ke ${$('pGunung').value} untuk ${n} orang (estimasi ${rp(per)}/orang, total ${rp(per * n)})${$('pTgl').value ? ', rencana tanggal ' + dObj($('pTgl').value).toLocaleDateString('id-ID', { day:'numeric', month:'long', year:'numeric' }) : ''}${meet ? ', meeting point ' + meet : ''}${cat ? '. Request: ' + cat : ''}.`;
+    S.leads.push({ tipe:'private', paket:k, jumlah:n, nama:$('pNama').value.trim(), wa:$('pWa').value, waktu:Date.now() }); store.set('karana_leads', S.leads);
+    $('privWa').href = waLink(msg); $('privDone').classList.remove('hidden'); $('privDone').scrollIntoView({ behavior:SM(), block:'center' });
+  });
+}
+
+/* Sheet: tertarik / daftar tunggu */
+let intTrip = null, intWait = false;
+function openInterest(id, wait) {
+  intTrip = tripById(id); intWait = !!wait; const soon = isSoon(intTrip), nm = fullName(intTrip);
+  $('intTitle').textContent = nm; $('intKicker').textContent = wait ? 'Daftar tunggu (simulasi)' : soon ? 'Jadwal belum dibuka' : 'Kabari saya';
+  $('intDesc').textContent = 'Isi nama dan nomor WhatsApp untuk menandai minatmu. Prototipe: data hanya tersimpan di perangkat ini dan belum terkirim ke Karana. Untuk jawaban nyata, tanya admin lewat WhatsApp.';
+  $('intBtn').textContent = wait ? 'Masuk daftar tunggu (simulasi)' : soon ? 'Kabari saya saat jadwal dibuka' : 'Kabari saya jika ada jadwal baru';
+  $('intWa').href = waLink(`Halo Karana Adventure, saya tertarik dengan ${nm}. Mohon dikabari jika ada jadwal ${soon ? 'yang dibuka' : 'baru'}.`);
+  $('intForm').querySelectorAll('.field').forEach(f => f.classList.remove('bad'));
+  $('interest').classList.add('on'); ovOpen('interest', () => $('interest').classList.remove('on')); setTimeout(() => $('iNama').focus(), 60);
+}
+function closeInterest() { if (OV.length && OV[OV.length - 1].name === 'interest') ovBack(); else $('interest').classList.remove('on'); }
+$('intForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const a = markField('iNama', $('iNama').value.trim().length > 1), b = markField('iWa', validWa($('iWa').value));
+  if (!a || !b) return;
+  S.leads.push({ tipe:intWait ? 'waitlist' : 'interest', gunung:fullName(intTrip), nama:$('iNama').value.trim(), wa:$('iWa').value, waktu:Date.now() }); store.set('karana_leads', S.leads);
+  closeInterest(); $('iNama').value = ''; $('iWa').value = '';
+  toast('Tersimpan di perangkat ini (prototipe), belum terkirim ke Karana. Tanya admin via WhatsApp untuk kepastian.');
+});
+
+/* ================= DETAIL ================= */
+function shareTrip() {
+  const t = S.trip, url = location.href, text = `Open trip ${fullName(t)} bareng Karana Adventure`;
+  if (navigator.share) navigator.share({ title:text, text, url }).catch(() => {});
+  else copyText(url, 'Link trip disalin');
+}
+function ctaHtml() {
+  const t = S.trip, d = curDep();
+  if (isSoon(t) || !d) return `<button onclick="openInterest('${t.id}', false)" class="btn btn-ember w-full">Kabari saya saat jadwal dibuka</button>`;
+  return sisa(d) <= 0 ? `<button onclick="openInterest('${t.id}', true)" class="btn btn-ember w-full">Masuk daftar tunggu (simulasi)</button>` : `<button onclick="startBooking()" class="btn btn-ember w-full">Daftar trip ini</button>`;
+}
+function acc(title, body, open, meta) {
+  return `<details class="dt border-t border-line" ${open ? 'open' : ''}><summary class="py-3"><span class="font-display text-xl font-bold">${title}${meta ? ` <span class="font-sans text-sm font-normal text-mute">· ${meta}</span>` : ''}</span><i class="bx bx-plus dt-ic text-2xl" aria-hidden="true"></i></summary><div class="pb-5 pt-1">${body}</div></details>`;
+}
+function summaryText(t) {
+  if (isSoon(t)) return 'Jadwal belum dibuka. Harga per orang di bawah berasal dari poster Karana.';
+  return `${t.jadwal.filter(upcoming).length} jadwal keberangkatan · mulai ${rp(minHarga(t))} per orang · pilih paket dan tanggal di bawah.`;
+}
+function renderDetail() {
+  const t = S.trip, L = LEADERS[t.leader], soon = isSoon(t), nm = fullName(t);
+  const pend = []; if (!soon && !t.iti) pend.push('itinerary'); if (!t.inc) pend.push('rincian termasuk dan tidak termasuk');
+  const mdplTxt = t.mdpl ? ' · ' + t.mdpl.toLocaleString('id-ID') + ' mdpl' : '';
+  const wa = `Halo Karana Adventure, saya mau tanya soal ${nm}.`;
+  const grp = h => h.trim() ? `<div class="border-b border-line">${h}</div>` : '';
+  const meetAcc = t.meeting.length ? acc('Titik kumpul', `${t.meeting.some(m => !m.lokasi && !m.jam) ? `<ul class="flex flex-wrap gap-2">${t.meeting.filter(m => !m.lokasi && !m.jam).map(m => `<li class="rounded-full border border-line bg-surface px-4 py-2 text-sm font-semibold">${m.kota}</li>`).join('')}</ul>` : ''}
+        <ul>${t.meeting.filter(m => m.lokasi || m.jam).map(m => `<li class="flex flex-wrap items-center justify-between gap-3 border-t border-line py-3"><div><p class="font-display text-xl font-bold">${m.kota}${m.jam ? ` <span class="text-ember">· ${m.jam} WIB</span>` : ''}</p>${m.lokasi ? `<p class="text-sm text-mute">${m.lokasi}</p>` : ''}</div>${m.lokasi && !m.nomap ? `<a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(m.lokasi + ' ' + m.kota)}" class="btn btn-line !min-h-[44px] !px-4"><i class="bx bx-map text-base" aria-hidden="true"></i> Peta</a>` : ''}</li>`).join('')}</ul>
+        <p class="mt-3 text-xs text-mute">Lokasi pasti dan jam kumpul yang belum tertera dikonfirmasi admin Karana. Tanyakan lewat WhatsApp jika perlu.</p>`, false) : '';
+  const incAcc = t.inc ? acc('Termasuk dan tidak termasuk', `<div class="grid gap-6 sm:grid-cols-2">
+          <div><p class="label !text-brand">Termasuk</p><ul>${t.inc.map(x => `<li class="flex gap-2 border-t border-line py-2.5 text-sm"><i class="bx bx-check text-xl text-brand" aria-hidden="true"></i>${x}</li>`).join('')}</ul></div>
+          <div><p class="label !text-ember">Tidak termasuk</p><ul>${t.exc.map(x => `<li class="flex gap-2 border-t border-line py-2.5 text-sm"><i class="bx bx-x text-xl text-ember" aria-hidden="true"></i>${x}</li>`).join('')}</ul></div>
+        </div>`, true) : '';
+  const itiAcc = t.iti ? acc('Itinerary', `<ol class="border-l border-line">${t.iti.map(([h, d]) => `<li class="relative pb-6 pl-6 last:pb-0"><span class="absolute -left-[5px] top-2 h-2.5 w-2.5 bg-ember"></span><p class="font-display text-xl font-bold">${h}</p><p class="prose-s mt-1 text-sm text-mute">${d}</p></li>`).join('')}</ol>`, false, t.iti.length + ' hari') : '';
+  const catAcc = t.catatan ? acc('Catatan penting', `<ul>${t.catatan.map(c => `<li class="flex gap-3 border-t border-line py-3"><i class="bx bx-info-circle mt-0.5 shrink-0 text-xl text-ember" aria-hidden="true"></i><span class="prose-s">${c}</span></li>`).join('')}</ul>`, false) : '';
+  const pendSec = pend.length ? `<p class="mb-3 flex gap-2 text-sm text-mute"><i class="bx bx-info-circle mt-0.5 shrink-0 text-lg text-ember" aria-hidden="true"></i><span>Belum tersedia: ${pend.join(' dan ')}. Tanyakan ke admin untuk info terbaru.</span></p>` : '';
+  const faqAcc = acc('Pertanyaan umum', ['dp', 'cuaca'].map(id => FAQS.find(f => f[2] === id)).filter(Boolean).map(([q, a]) => `<div class="border-t border-line py-3"><p class="font-semibold">${q}</p><p class="prose-s mt-1 text-sm text-mute">${a}</p></div>`).join('') + `<button type="button" onclick="jump('faq')" class="btn btn-line mt-3 !min-h-[44px]">Lihat semua pertanyaan</button>`, false);
+  const gearAcc = acc('Perlengkapan pribadi wajib', `<ul class="grid grid-cols-2 gap-x-4">${GEAR.map(g => `<li class="flex items-start gap-2 border-t border-line py-2.5 text-sm"><i class="bx bx-check mt-0.5 text-lg text-brand" aria-hidden="true"></i>${g}</li>`).join('')}</ul>`, false, GEAR.length + ' item');
+  const safeAcc = acc('Keselamatan dan pendampingan', `<p class="mb-3"><span class="pend !ml-0">Contoh, menunggu persetujuan Karana</span></p><ul>${SAFETY.map(([ic, tx]) => `<li class="flex gap-3 border-t border-line py-3 text-sm"><i class="bx ${ic} mt-0.5 shrink-0 text-xl text-brand" aria-hidden="true"></i>${tx}</li>`).join('')}</ul><p class="prose-s mt-3 text-sm text-mute">Poin di atas belum diverifikasi dan akan diganti dengan SOP resmi Karana sebelum launching. Mendaki gunung selalu mengandung risiko, dan informasi ini bukan jaminan bebas risiko.</p>`, false, 'contoh');
+  const galAcc = acc('Galeri trip (foto contoh)', `<div class="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:grid-rows-2">
+          ${t.gallery.slice(0, 5).map((g, i) => `<button onclick="lbOpen(${i})" class="group relative overflow-hidden ${i === 0 ? 'col-span-2 row-span-2 aspect-square sm:aspect-auto' : 'aspect-square'}" aria-label="Perbesar foto contoh ${i + 1}"><img src="${u(g, 700)}" width="700" height="700" alt="Foto contoh ${t.gunung} ${i + 1}" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 group-hover:scale-105"><span class="sample-tag">Foto contoh</span>${i === 4 && t.gallery.length > 5 ? `<span class="absolute inset-0 grid place-items-center bg-black/60 font-display text-4xl font-bold text-white">+${t.gallery.length - 5}</span>` : ''}</button>`).join('')}
+        </div><p class="mt-2 text-xs text-mute">Foto ilustrasi, bukan dokumentasi asli Karana. Akan diganti dokumentasi asli.</p>`, false);
+  const leadAcc = acc('Trip leader', `<div class="flex items-center gap-4 border border-line bg-surface p-4">${L.real ? `<img src="${L.file}" onerror="leaderFallback(this)" width="64" height="64" loading="lazy" alt="Foto ${L.nama}" class="h-16 w-16 object-cover">` : `<img src="${u(L.foto, 200)}" width="64" height="64" loading="lazy" alt="Foto contoh untuk profil leader dummy" class="h-16 w-16 object-cover">`}<div><span class="pend !ml-0 mb-1">${L.real ? 'Profil asli · penugasan contoh' : 'Contoh (dummy)'}</span><p class="font-display text-2xl font-bold">${L.nama}</p><p class="text-sm text-mute">${L.info}</p>${L.ig ? `<a href="${L.ig}" target="_blank" rel="noopener" class="mt-1 inline-flex min-h-[44px] items-center gap-1 text-sm font-semibold text-ember"><i class="bx bxl-instagram" aria-hidden="true"></i>Instagram</a>` : ''}</div></div><p class="mt-2 text-xs text-mute">Penugasan leader masih contoh; leader bertugas dikonfirmasi admin.${L.real ? '' : ' Profil dummy, akan diganti tim asli.'}</p>`, false);
+  $('detailBody').innerHTML = `
+  <section data-ph class="relative isolate flex min-h-[40vh] items-end overflow-hidden bg-[#1b221e] text-white">
+    <img ${loc('img/trip-' + t.id + '.jpg', u(t.hero, 1600))} data-alt="${t.gunung}" width="1600" height="1067" fetchpriority="high" alt="Foto ${t.gunung}" class="absolute inset-0 -z-10 h-full w-full object-cover">
+    <span class="sample-tag hidden !bottom-auto !top-3">Foto contoh</span>
+    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-black/90 via-black/35 to-black/30"></div>
+    <div class="mx-auto w-full max-w-6xl px-5 pb-8 pt-28">
+      <div class="mb-3 flex flex-wrap items-center gap-2" id="dBadge"></div>
+      <h1 class="font-display text-5xl sm:text-8xl">${t.gunung}</h1>
+      <div class="mt-2 flex flex-wrap items-center justify-between gap-3"><p class="text-white/85">${[t.jalur, t.tagline].filter(Boolean).join(' · ')}${mdplTxt}${t.jalur || t.tagline || t.mdpl ? '' : KAT[t.kat]}</p>
+      <button onclick="shareTrip()" class="btn border-white/50 !min-h-[44px] !px-4 text-white hover:border-white"><i class="bx bx-share-alt text-lg" aria-hidden="true"></i> Bagikan</button></div>
+    </div>
+  </section>
+
+  <div class="mx-auto grid max-w-6xl gap-12 px-5 py-12 lg:grid-cols-[1fr_340px]">
+    <div class="min-w-0 space-y-14">
+      <section aria-labelledby="d-titik"><h2 id="d-titik" class="font-display text-3xl">${t.titikLabel || 'Pilih paket'}</h2><p class="mb-4 mt-1 text-sm text-mute">${t.kat === 'camp' ? 'Harga mengikuti paket. Hemat: transport patungan. Lengkap: transport termasuk.' : 'Harga mengikuti titik kumpul yang kamu pilih.'}</p><div id="dTitik" class="grid gap-2 sm:grid-cols-2"></div></section>
+
+      ${soon ? `<section class="soon-box p-5" aria-labelledby="d-soon"><span class="soon-badge"><i class="bx bx-time-five" aria-hidden="true"></i>Jadwal belum dibuka</span><h2 id="d-soon" class="mt-3 font-display text-2xl">Tanggal belum tersedia</h2><p class="mt-1 text-mute">Harga di atas dari poster Karana. Tekan <b class="text-fg">Kabari saya saat jadwal dibuka</b> atau tanya admin.</p></section>` : `<section aria-labelledby="d-tgl"><h2 id="d-tgl" class="mb-4 font-display text-3xl">Pilih tanggal</h2><div id="dDates" role="group" aria-label="Tanggal keberangkatan"></div><p id="dDurNote" class="mt-2 hidden text-sm"></p><p class="mt-2 text-xs text-mute">Kuota masih contoh (simulasi). "Penuh (simulasi)" hanya untuk uji tampilan.${t.kat === 'camp' || t.kat === 'tektok' ? ' Weekday: Senin–Kamis.' : ''}</p></section>`}
+
+      <section aria-labelledby="d-more"><h2 id="d-more" class="mb-3 font-display text-3xl">Info lengkap</h2>
+        ${pendSec}
+        <div class="border-b border-line">${meetAcc + itiAcc + incAcc + catAcc + faqAcc + gearAcc + safeAcc + leadAcc + galAcc}</div>
+        <a href="${waLink(wa)}" target="_blank" rel="noopener" class="btn btn-line mt-5"><i class="bx bxl-whatsapp text-lg" aria-hidden="true"></i> Ada pertanyaan? Tanya admin</a>
+      </section>
+    </div>
+
+    <aside class="hidden lg:block" aria-label="Ringkasan harga"><div class="sticky top-24 border border-line bg-surface p-6">
+      <p class="text-[.7rem] font-semibold uppercase tracking-widest text-mute">Pilihan</p>
+      <p id="aTitik" class="font-display text-2xl font-bold leading-tight"></p>
+      <p id="aTgl" class="mt-1 text-sm text-mute"></p>
+      <p class="mt-4 text-[.7rem] font-semibold uppercase tracking-widest text-mute">Harga per orang</p>
+      <p id="aHarga" class="font-display text-5xl font-extrabold leading-none text-ember"></p>
+      <p id="aDp" class="mt-2 text-sm font-semibold"></p>
+      <p class="mt-3 text-sm text-mute">${soon ? 'Jadwal belum dibuka.' : 'DP 50% saat mendaftar, sisa lunas di basecamp.' + (DEMO_MODE ? ' Penahanan slot 2 jam hanya simulasi di versi demo.' : ' Slot ditahan 2 jam setelah data diisi.')}</p>
+      <div class="mt-5 space-y-2"><div id="aCta"></div><a id="aWa" href="${waLink(wa)}" target="_blank" rel="noopener" class="btn btn-line w-full"><i class="bx bxl-whatsapp text-lg" aria-hidden="true"></i> Tanya via WhatsApp</a></div>
+    </div></aside>
+  </div>
+
+  <div class="fixed inset-x-0 bottom-0 z-40 flex items-center justify-between gap-3 border-t border-line bg-bg px-4 py-3 shadow-[0_-6px_18px_-10px_rgb(0_0_0/.25)] lg:hidden" style="padding-bottom:max(.75rem,env(safe-area-inset-bottom))">
+    <div class="min-w-0"><p id="mHarga" class="font-display text-3xl font-extrabold leading-none"></p><p id="mDp" class="mt-1 truncate text-xs text-mute"></p><p id="mDp2" class="truncate text-xs text-mute"></p></div>
+    <div class="mbar-cta shrink-0" id="mCta"></div>
+  </div>`;
+  renderTitikTiles('dTitik'); if (!soon) renderDateChips('dDates'); syncDetail(); track('view_detail', { trip:t.id });
+}
+function renderTitikTiles(target) {
+  const soon = isSoon(S.trip);
+  $(target).innerHTML = S.trip.titik.map((x, i) => {
+    const inner = `<p class="font-display text-xl font-bold leading-tight">${x.n}</p>${x.sub ? `<p class="text-xs text-mute">${x.sub}</p>` : ''}${x.durasi ? `<p class="text-xs text-mute">${x.durasi}</p>` : ''}<p class="mt-1 font-display text-2xl font-extrabold leading-none text-ember">${rp(x.h)} <span class="font-sans text-xs font-normal text-mute">/ orang</span></p>`;
+    return soon && target === 'dTitik' ? `<div class="tile cursor-default p-4">${inner}</div>` : `<button type="button" class="tile p-4" aria-pressed="${i === S.titik}" onclick="pickTitik(${i})">${inner}</button>`;
+  }).join('');
+}
+function renderDateChips(target) {
+  const ds = curDeps(), by = {};
+  ds.forEach((d, i) => { (by[d.tgl.slice(0, 7)] = by[d.tgl.slice(0, 7)] || []).push([d, i]); });
+  $(target).innerHTML = Object.entries(by).map(([k, arr]) => `<div class="mb-4"><p class="label !mb-2">${dObj(k + '-01').toLocaleDateString('id-ID', { month:'long', year:'numeric' })}</p><div class="flex flex-wrap gap-2">${arr.map(([d, i]) => {
+    const s = sisa(d), wk = showWk(S.trip, d);
+    return `<button type="button" class="tile dchip px-3.5 py-2.5" aria-pressed="${i === S.dep}" onclick="pickDep(${i})" aria-label="${fmtRange(d)}${s <= 0 ? ', penuh (simulasi)' : ''}${wk ? ', weekday' : ''}"><span class="block font-display text-lg font-bold leading-none">${fmtDays(d)}</span><span class="mt-1 block text-[.72rem] text-mute">${s <= 0 ? 'Penuh (simulasi)' : wk ? 'Weekday' : '&nbsp;'}</span></button>`;
+  }).join('')}</div></div>`).join('') || '<p class="text-mute">Belum ada jadwal untuk pilihan ini.</p>';
+}
+function fixDep() { if (S.dep >= curDeps().length) S.dep = 0; }
+function pickTitik(i) {
+  S.titik = i; S.dep = 0;
+  if (S.route === 'detail') { renderTitikTiles('dTitik'); renderDateChips('dDates'); syncDetail(); }
+  if (S.route === 'booking') { renderTitikTiles('bTitik'); renderBookingDates(); renderMeet(); setQty(0); updateTicket(); }
+}
+function pickDep(i) { S.dep = i; if (S.route === 'detail') { renderDateChips('dDates'); syncDetail(); } }
+function syncDetail() {
+  const t = S.trip, x = t.titik[S.titik], d = isSoon(t) ? null : curDep(), dp = 'DP ' + rp(Math.round(x.h * 0.5)) + ' / orang';
+  if ($('aTitik')) { $('aTitik').textContent = x.n; $('aHarga').textContent = rp(x.h); $('aDp').textContent = dp; $('aTgl').textContent = d ? dateLbl(x, d) : 'Jadwal belum dibuka'; }
+  if ($('mHarga')) { $('mHarga').textContent = rp(x.h); $('mDp').textContent = x.n + (d ? ' · ' + fmtRange(d) : ''); $('mDp2').textContent = dp; }
+  const dur = x.durasi || (d ? (d.hari <= 1 ? '1 hari' : d.hari + ' hari') : '');
+  if ($('dBadge')) {
+    $('dBadge').innerHTML = slotBadge(d) + `<span class="border border-white/50 px-2 py-0.5 text-[.7rem] font-semibold uppercase tracking-widest">${KAT[t.kat]}${dur ? ' · ' + dur : ''}</span>`;
+  }
+  if ($('dDurNote')) { const n = depNote(x, d); $('dDurNote').innerHTML = n ? '<span class="pend !ml-0">Perlu konfirmasi Karana</span> ' + n : ''; $('dDurNote').classList.toggle('hidden', !n); }
+  if ($('aCta')) $('aCta').innerHTML = ctaHtml();
+  if ($('mCta')) $('mCta').innerHTML = ctaHtml().replace('w-full', '');
+  const msg = `Halo Karana Adventure, saya mau tanya soal ${fullName(t)}${d ? ' ' + fmtRange(d) : ''}, pilihan ${x.n}.`;
+  if ($('aWa')) $('aWa').href = waLink(msg);
+  updateWa('detail');
+}
+
+/* Lightbox */
+let lbI = 0, lbFrom = null;
+function lbOpen(i) { lbI = i; lbFrom = document.activeElement; lbShow(); $('lb').classList.remove('hidden'); $('lb').classList.add('flex'); ovOpen('lb', lbHide); $('lb').querySelector('button').focus(); }
+function lbShow() { const g = S.trip.gallery; $('lbImg').src = u(g[lbI], 1400); $('lbImg').alt = `Foto contoh ${lbI + 1} dari ${g.length}, ${S.trip.gunung}`; $('lbCount').textContent = `${lbI + 1} / ${g.length} · Foto contoh`; }
+function lbNav(d) { const n = S.trip.gallery.length; lbI = (lbI + d + n) % n; lbShow(); }
+function lbHide() { $('lb').classList.add('hidden'); $('lb').classList.remove('flex'); if (lbFrom) lbFrom.focus(); }
+function lbClose() { if (OV.length && OV[OV.length - 1].name === 'lb') ovBack(); else lbHide(); }
+document.addEventListener('keydown', e => {
+  if (e.key === 'Tab' && OV.length) trapTab(e);
+  if (!$('lb').classList.contains('hidden')) { if (e.key === 'Escape') lbClose(); if (e.key === 'ArrowLeft') lbNav(-1); if (e.key === 'ArrowRight') lbNav(1); }
+  else if (e.key === 'Escape') ovBack();
+});
+
+/* ================= TAHAN SLOT ================= */
+function holdRelease() {
+  if (!S.hold) return; const d = depByKey(S.hold.depKey); if (d) d.ditahan = Math.max(0, (d.ditahan || 0) - S.hold.qty); S.hold = null;
+  $('holdBar').classList.add('hidden'); $('holdBar').classList.remove('flex'); renderList(); if (S.route === 'detail') renderDetail();
+}
+function holdStart() {
+  const d = curDep(); if (!d) return false;
+  if (S.hold && S.hold.depKey === d.key) { holdSetQty(S.qty); return true; }
+  holdRelease();
+  if (S.qty > sisa(d)) { toast('Kuota simulasi tersisa ' + sisa(d) + ', kurangi jumlah peserta.'); return false; }
+  S.hold = { tripId:S.trip.id, depKey:d.key, qty:S.qty, exp:Date.now() + HOLD_MS }; d.ditahan = (d.ditahan || 0) + S.qty; renderList(); tickHold(); track('begin_booking', { trip:S.trip.id }); return true;
+}
+function holdSetQty(n) { const d = depByKey(S.hold.depKey); d.ditahan += n - S.hold.qty; S.hold.qty = n; renderList(); }
+function tickHold() {
+  const bar = $('holdBar');
+  if (!S.hold) return;
+  const left = S.hold.exp - Date.now();
+  if (left <= 0) {
+    const was = S.route === 'booking' && $('s3').classList.contains('hidden'); holdRelease();
+    if (was) { toast('Waktu simulasi tahan slot habis. Silakan mulai lagi dari data peserta.'); toStep(1, true); }
+    return;
+  }
+  const s = Math.floor(left / 1000), f = n => String(n).padStart(2, '0');
+  $('holdTime').textContent = `${f(Math.floor(s / 3600))}:${f(Math.floor(s % 3600 / 60))}:${f(s % 60)}`;
+  const show = S.route === 'booking' && $('s3').classList.contains('hidden');
+  bar.classList.toggle('hidden', !show); bar.classList.toggle('flex', show);
+}
+setInterval(tickHold, 1000);
+
+/* ================= BOOKING ================= */
+function renderBookingDates() {
+  fixDep(); const ds = curDeps();
+  $('bDate').innerHTML = ds.map((d, i) => `<option value="${i}" ${sisa(d) <= 0 ? 'disabled' : ''}>${fmtRange(d)}${sisa(d) <= 0 ? ' · penuh (simulasi)' : ''}</option>`).join('');
+  $('bDate').value = String(S.dep);
+}
+function renderMeet() {
+  const t = S.trip, x = t.titik[S.titik];
+  $('bMeet').innerHTML = t.meeting.filter(m => !m.mp || !x.mp || m.mp === x.mp).map(m => `<option>${m.kota}${m.lokasi ? ' — ' + m.lokasi : ''}${m.jam ? ' (' + m.jam + ' WIB)' : ''}</option>`).join('');
+}
+function prepareBooking() {
+  const t = S.trip, resume = S.hold && S.hold.tripId === t.id;
+  if (S.hold && !resume) holdRelease();
+  fixDep(); { const ds = curDeps(), cur = ds[S.dep]; if (cur && sisa(cur) <= 0) { const j = ds.findIndex(d => sisa(d) > 0); if (j >= 0) S.dep = j; } }
+  $('tkImg').onerror = () => { $('tkImg').onerror = null; $('tkImg').src = u(t.hero, 600); }; $('tkImg').src = 'img/trip-' + t.id + '.jpg'; $('tkName').textContent = t.gunung; $('bSub').textContent = fullName(t);
+  if (!resume) {
+    ['bNama', 'bWa', 'bDarNama', 'bDarWa', 'bSehat'].forEach(i => { $(i).value = ''; });
+    try { const d = JSON.parse(sessionStorage.getItem('karana_draft') || '{}'); ['bNama', 'bWa'].forEach(i => { if (d[i]) $(i).value = d[i]; }); } catch (e) {}
+    S.qty = 1; S.names = []; S.bayar = 'dp'; S.file = null; $('bFile').value = ''; $('bAgree').checked = false;
+    $('upPrev').classList.add('hidden'); $('upText').textContent = 'Ketuk untuk unggah foto bukti transfer (JPG/PNG, maks. 8 MB)';
+  }
+  document.querySelectorAll('#p-booking .field').forEach(f => f.classList.remove('bad'));
+  $('lTitik').textContent = t.titikLabel || 'Pilih paket';
+  renderTitikTiles('bTitik'); renderBookingDates(); renderMeet(); setPay(S.bayar); setQty(0); renderExtra(); toStep(1, true); tickHold();
+}
+function renderExtra() {
+  const box = $('bExtra');
+  box.innerHTML = Array.from({ length:S.qty - 1 }, (_, k) => { const i = k + 1; return `<div class="field"><label class="label" for="bP${i}">Nama peserta ${i + 1}</label><input id="bP${i}" class="input" placeholder="Nama sesuai KTP" value="${esc(S.names[i])}" oninput="S.names[${i}]=this.value"><p class="err">Nama peserta ${i + 1} wajib diisi.</p></div>`; }).join('');
+}
+function setQty(d) {
+  const dp = curDep(), held = S.hold && dp && S.hold.depKey === dp.key ? S.hold.qty : 0, max = Math.max(1, dp ? sisa(dp) + held : 1);
+  S.qty = Math.min(max, Math.max(1, S.qty + d));
+  if (held) holdSetQty(S.qty);
+  $('bQty').textContent = S.qty; $('qtyNote').textContent = `Mode demo: batas ${max} peserta mengikuti kuota simulasi.`;
+  renderExtra(); updateTicket();
+}
+function setPay(k) {
+  S.bayar = k; $('payDp').setAttribute('aria-pressed', k === 'dp'); $('payFull').setAttribute('aria-pressed', k === 'full');
+  $('upLabel').textContent = k === 'dp' ? 'Bukti transfer DP' : 'Bukti transfer pelunasan'; updateTicket();
+}
+function calc() { const x = S.trip.titik[S.titik], total = x.h * S.qty; return { x, total, pay:S.bayar === 'dp' ? Math.round(total * 0.5) : total }; }
+function updateTicket() {
+  const { x, total, pay } = calc(), d = curDep();
+  $('tkTgl').textContent = d ? dateLbl(x, d) : '—'; renderBookNotes();
+  $('tkTitik').textContent = x.n; $('tkQty').textContent = S.qty + ' orang'; $('tkTotal').textContent = rp(total); $('tkPay').textContent = rp(pay); $('payNominal').textContent = rp(pay);
+}
+function renderBookNotes() {
+  const t = S.trip, x = t.titik[S.titik], d = curDep(), box = $('bNotes'), items = (t.catatan || []).slice(), n = depNote(x, d); if (n) items.push(n);
+  box.classList.toggle('hidden', !items.length);
+  box.innerHTML = items.length ? '<p class="font-semibold">Catatan penting trip ini</p><ul class="mt-2 space-y-1.5">' + items.map(c => '<li class="flex gap-2"><i class="bx bx-info-circle mt-0.5 shrink-0 text-lg text-ember" aria-hidden="true"></i><span>' + c + '</span></li>').join('') + '</ul>' : '';
+}
+function validateStep1() {
+  let ok = true; const m = (id, g) => { if (!markField(id, g)) ok = false; };
+  m('bNama', $('bNama').value.trim().length > 1); m('bWa', validWa($('bWa').value));
+  for (let i = 1; i < S.qty; i++) m('bP' + i, ($('bP' + i).value || '').trim().length > 1);
+  m('bDarNama', $('bDarNama').value.trim().length > 1); m('bDarWa', validWa($('bDarWa').value));
+  if (!ok) { const el = document.querySelector('#s1 .field.bad .input'); if (el) { el.scrollIntoView({ block:'center', behavior:SM() }); el.focus({ preventScroll:true }); } }
+  return ok;
+}
+function toStep(n, silent) {
+  const cur = [1, 2, 3].find(i => !$('s' + i).classList.contains('hidden')) || 1, sdir = n > cur ? 'fwd' : n < cur ? 'bck' : '';
+  if (n === 2 && !silent) { if (!validateStep1()) return; if (!holdStart()) return; }
+  [1, 2, 3].forEach(i => {
+    $('s' + i).classList.toggle('hidden', i !== n); $('s' + i).classList.remove('fwd', 'bck'); if (i === n && sdir && !silent) { void $('s' + i).offsetWidth; $('s' + i).classList.add(sdir); }
+    $('seg' + i).className = 'seg ' + (i === n ? 'on' : i < n ? 'done' : '');
+    $('sl' + i).className = i === n ? 'text-fg' : i < n ? 'text-brand' : 'text-mute'; $('sl' + i).setAttribute('aria-current', i === n ? 'step' : 'false');
+  });
+  tickHold(); if (!silent) { window.scrollTo({ top:0, behavior:SM() }); const hh = $('h-s' + n); if (hh) { hh.setAttribute('tabindex', '-1'); hh.focus({ preventScroll:true }); } }
+}
+function compressImage(file) {
+  return new Promise(res => {
+    try {
+      const url = URL.createObjectURL(file), img = new Image();
+      img.onload = () => { const sc = Math.min(1, 1280 / Math.max(img.width, img.height)), c = document.createElement('canvas'); c.width = Math.round(img.width * sc); c.height = Math.round(img.height * sc); c.getContext('2d').drawImage(img, 0, 0, c.width, c.height); c.toBlob(b => { URL.revokeObjectURL(url); res(b || file); }, 'image/jpeg', .8); };
+      img.onerror = () => { URL.revokeObjectURL(url); res(file); }; img.src = url;
+    } catch (e) { res(file); }
+  });
+}
+const kb = n => n > 1048576 ? (n / 1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(n / 1024)) + ' KB';
+function onFile(inp) {
+  const f = inp.files[0], fld = $('upField'); fld.classList.remove('bad'); $('upErr').textContent = 'Unggah foto bukti transfer sebelum mengirim.';
+  if (!f) return;
+  if (!/^image\//.test(f.type)) { S.file = null; inp.value = ''; $('upErr').textContent = 'File harus berupa gambar (JPG, PNG, atau sejenisnya).'; fld.classList.add('bad'); return; }
+  if (f.size > 8 * 1048576) { S.file = null; inp.value = ''; $('upErr').textContent = 'Ukuran file maksimal 8 MB.'; fld.classList.add('bad'); return; }
+  S.file = f; $('upText').textContent = `${f.name} (${kb(f.size)}), ketuk untuk ganti`;
+  const p = $('upPrev'); p.src = URL.createObjectURL(f); p.classList.remove('hidden');
+}
+async function sendBooking() {
+  if (!S.hold) { toast('Simulasi tahan slot belum dimulai. Mulai dari data peserta.'); toStep(1, true); return; }
+  const a = markField('upField', !!S.file) , g = markField('bAgree', $('bAgree').checked);
+  if (!a || !g) { const el = document.querySelector('#s2 .field.bad'); if (el) el.scrollIntoView({ block:'center', behavior:SM() }); return; }
+  const btn = $('sendBtn'); btn.disabled = true; btn.innerHTML = '<span class="spin"></span> Menyimpan…';
+  const blob = await compressImage(S.file); await new Promise(r => setTimeout(r, 900));
+  const t = S.trip, dep = depByKey(S.hold.depKey), { x, total, pay } = calc(), nm = fullName(t);
+  let kode; do { kode = 'KRN-' + Math.random().toString(36).slice(2, 6).toUpperCase(); } while (kode === 'KRN-DEMO' || S.bookings.some(b => b.kode === kode));
+  /* Minimisasi data: hanya ringkasan yang dipakai halaman status yang disimpan di perangkat.
+     TODO-BACKEND: payload lengkap (peserta, nomor WA, kontak darurat, catatan kesehatan, meeting point, file bukti) dikirim ke server lewat koneksi aman; di demo ini tidak disimpan. */
+  S.bookings.push({ kode, tripId:t.id, depKey:dep.key, gunung:nm, tgl:fmtRange(dep), titik:x.n, qty:S.qty, nama:$('bNama').value.trim(), status:'menunggu', bayar:S.bayar === 'dp' ? 'DP 50%' : 'Lunas', jumlah:pay, total, bukti:{ ukuran:blob.size }, waktu:Date.now() });
+  store.set('karana_bookings', S.bookings);
+  try { sessionStorage.removeItem('karana_draft'); } catch (e) {}
+  dep.terisi += S.hold.qty; dep.ditahan = Math.max(0, (dep.ditahan || 0) - S.hold.qty); S.hold = null; renderList();
+  $('bCode').textContent = kode; $('bStatusLink').href = '#/status?kode=' + kode;
+  $('bWaLink').href = waLink(`${demoTag}Halo Karana Adventure, saya mendaftar ${nm} ${fmtRange(dep)}, ${x.n} (kode ${kode}). Saya akan mengirim bukti transfer ${rp(pay)} lewat chat ini. Mohon dicek.`);
+  btn.disabled = false; btn.textContent = 'Kirim pendaftaran (demo)'; track('form_completion', { trip:t.id }); track('payment_proof_submission', { trip:t.id, simulasi:true }); toStep(3);
+}
+
+/* ================= STATUS ================= */
+function findBooking(k) { k = String(k || '').trim().toUpperCase(); return k === 'KRN-DEMO' ? DEMO_BOOKING : S.bookings.find(b => b.kode === k); }
+function renderStatus(b) {
+  S.lastKode = b.kode; updateWa('status');
+  const done = b.status === 'terkonfirmasi', step = (on, cur, label, sub) => `<li class="relative pb-6 pl-8 last:pb-0"><span class="absolute left-0 top-1 grid h-5 w-5 place-items-center ${on ? 'bg-brand text-[rgb(var(--bg))]' : cur ? 'bg-ember pulse-dot' : 'border border-line'}">${on ? '<i class="bx bx-check text-sm" aria-hidden="true"></i>' : ''}</span><p class="font-display text-2xl font-bold ${on || cur ? '' : 'text-mute'}">${label}</p><p class="text-sm text-mute">${sub}</p></li>`;
+  $('sResult').innerHTML = `<div class="border border-line bg-surface p-5">
+    <p class="mb-4 border border-ember/60 bg-ember/10 p-3 text-sm" role="note"><b>Simulasi.</b> ${b.kode === 'KRN-DEMO' ? 'Ini data contoh, bukan transaksi asli.' : 'Status ini tersimpan di perangkatmu dan tidak terhubung ke pembayaran atau admin sungguhan.'}</p>
+    <p class="label !mb-1">Kode</p><p class="font-display text-4xl font-extrabold tracking-widest text-ember">${esc(b.kode)}</p>
+    <p class="mt-3 font-display text-2xl font-bold">${esc(b.gunung)}</p><p class="text-sm text-mute">${esc(b.tgl)} · ${esc(b.titik)} · ${esc(b.qty)} orang · ${esc(b.bayar)} ${rp(b.jumlah)}</p>
+    <ol class="mt-6 border-l border-line pl-0">${step(true, false, 'Pendaftaran tercatat', 'Ringkasan pendaftaran tercatat di perangkat ini.')}${step(done, !done, 'Verifikasi pembayaran', done ? 'Pembayaran terverifikasi (simulasi).' : 'Menunggu verifikasi tim Karana. Belum terkonfirmasi.')}${step(done, false, 'Pendaftaran terkonfirmasi', done ? 'Simulasi: pada versi live, peserta dimasukkan ke grup WhatsApp keberangkatan.' : 'Setelah pembayaran terverifikasi, peserta dimasukkan ke grup WhatsApp keberangkatan.')}</ol>
+    <div class="mt-6 flex flex-wrap gap-3"><a target="_blank" rel="noopener" href="${waLink(`${demoTag}Halo Karana Adventure, saya mau tanya soal status pendaftaran dengan kode ${b.kode}.`)}" class="btn btn-line"><i class="bx bxl-whatsapp text-lg" aria-hidden="true"></i> Tanya via WhatsApp</a>${!done && b.kode !== 'KRN-DEMO' ? `<button class="btn btn-line" onclick="simVerify('${esc(b.kode)}')">Simulasi verifikasi admin (demo)</button>` : ''}</div></div>`;
+}
+let clrArm = false, clrT;
+function clearLocalData(btn) {
+  if (!clrArm) { clrArm = true; btn.textContent = 'Tekan lagi untuk menghapus'; clearTimeout(clrT); clrT = setTimeout(() => { clrArm = false; btn.textContent = 'Hapus data demo di perangkat ini'; }, 5000); return; }
+  clrArm = false; clearTimeout(clrT);
+  ['karana_bookings', 'karana_leads'].forEach(k => { try { localStorage.removeItem(k); } catch (e) {} }); try { sessionStorage.removeItem('karana_draft'); } catch (e) {}
+  S.bookings = []; S.leads = []; $('sResult').innerHTML = ''; btn.textContent = 'Hapus data demo di perangkat ini'; toast('Data demo di perangkat ini sudah dihapus.');
+}
+function simVerify(k) { const b = findBooking(k); if (b) { b.status = 'terkonfirmasi'; store.set('karana_bookings', S.bookings); renderStatus(b); toast('Simulasi: status berubah jadi terkonfirmasi, tidak terhubung ke pembayaran asli.'); } }
+function initStatus(kode) { S.lastKode = null; $('sKode').value = kode || ''; $('sResult').innerHTML = ''; $('sKode').closest('.field').classList.remove('bad'); if (kode) { const b = findBooking(kode); if (b) renderStatus(b); else $('sKode').closest('.field').classList.add('bad'); } }
+$('statusForm').addEventListener('submit', e => { e.preventDefault(); const b = findBooking($('sKode').value); markField('sKode', !!b); if (b) renderStatus(b); else $('sResult').innerHTML = ''; });
+
+
+/* ================= GALERI + SOSMED ================= */
+const SOC = [['instagram', 'Instagram', 'bxl-instagram'], ['tiktok', 'TikTok', 'bxl-tiktok']];
+function renderSocial() {
+  document.querySelectorAll('.js-social').forEach(el => { el.innerHTML = SOC.filter(([k]) => SOSMED[k]).map(([k, n, ic]) => `<a href="${SOSMED[k]}" target="_blank" rel="noopener" class="btn btn-line"><i class="bx ${ic} text-lg" aria-hidden="true"></i> ${n}</a>`).join(''); });
+  document.querySelectorAll('.js-social-text').forEach(el => { el.innerHTML = SOC.filter(([k]) => SOSMED[k]).map(([k, n]) => `<a href="${SOSMED[k]}" target="_blank" rel="noopener" class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center hover:text-fg">${n}</a>`).join(''); });
+}
+/* Foto galeri: simpan di folder img/ dengan nama persis seperti di kolom file. Kalau file belum ada, otomatis pakai foto contoh. */
+const DOK = [
+  { judul:'Gunung Gede', file:'img/dok-gede.jpg' },
+  { judul:'Gunung Merbabu', file:'img/dok-merbabu.jpg' },
+  { judul:'Gunung Rinjani', file:'img/dok-rinjani.jpg' },
+  { judul:'Gunung Raung', file:'img/dok-raung.jpg' },
+  { judul:'Gunung Ciremai', file:'img/dok-ciremai.jpg' }
+];
+function renderTentang() { $('tentangN').textContent = TRIPS.length; $('tentangK').textContent = Object.keys(KAT).length; }
+function renderDok() {
+  const ig = SOSMED.instagram;
+  $('dokGrid').innerHTML = DOK.map((d, i) => {
+    const big = i === 0, fb = u(PHOTOS[i % PHOTOS.length], big ? 1000 : 600);
+    return `<a data-ph href="${ig}" target="_blank" rel="noopener" class="group relative block overflow-hidden rounded-2xl ${big ? 'col-span-2 aspect-[16/9] md:row-span-2 md:aspect-auto' : 'aspect-square'}" aria-label="${d.judul}, buka Instagram Karana"><img src="${d.file}" onerror="sampleImg(this,'${fb}')" data-alt="${d.judul}" loading="lazy" decoding="async" width="${big ? 1000 : 600}" height="${big ? 560 : 600}" alt="Dokumentasi trip ${d.judul}" class="h-full w-full object-cover transition duration-500 group-hover:scale-105"><span class="sample-tag hidden !bottom-auto !top-2">Foto contoh</span><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent p-3 pt-10 text-sm font-semibold text-white sm:text-base">${d.judul}</span></a>`;
+  }).join('');
+}
+/* ================= INIT ================= */
+syncThemeUI();
+renderChips(); renderList(); renderDok(); renderTentang(); renderSocial(); renderFaq(); initTesti(); initHeroSearch(); initPrivate(); openTab('open');
+document.querySelector('[role=tablist]').addEventListener('keydown', e => {
+  if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) return;
+  e.preventDefault(); const t = (e.key === 'ArrowRight' || e.key === 'End') ? 'private' : 'open'; openTab(t); $('tab-' + t).focus();
+});
+['bNama', 'bWa'].forEach(id => $(id).addEventListener('input', () => {
+  try { const d = JSON.parse(sessionStorage.getItem('karana_draft') || '{}'); d[id] = $(id).value; sessionStorage.setItem('karana_draft', JSON.stringify(d)); } catch (e) {}
+}));
+document.querySelectorAll('.field .err').forEach(e => e.setAttribute('role', 'alert'));
+document.addEventListener('click', e => { const a = e.target.closest && e.target.closest('a[href^="https://wa.me/"]'); if (a) track('whatsapp_click', { page:S.route }); });
+window.addEventListener('hashchange', render); render(); S.booted = true;
+</script>
+</body>
+</html>
